@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STEP2 옵션 선택</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/step2opt.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="hMenu">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="#">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo" onclick="location.href='#'">
+                </div>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+                            <li><a href="login.html">예약확인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">고객문의</a></li>
+                            <li><a href="#">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <!---- nav ----->
+        <div class="nav">
+            <div class="step">
+                <ul>
+                    <li>
+                        <a href="#" onclick="history.back()">
+                            <span class="step_bold">STEP1</span>
+                            날짜/인원/객실 선택
+                            <div class="arrow"></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="step_bold">STEP2</span>
+                        옵션 선택
+                        <div class="arrow"></div>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP3</span>
+                        고객 정보 입력
+                        <div class="arrow"></div>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP4</span>
+                        예약 완료
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---- section ----->
+        <div class="contents">
+            <div class="sec1">
+                <div class="cont1">
+                    <div class="title1">옵션 사항</div>
+                    <div class="subtitle">객실이용에 필요한 옵션사항을 선택하세요.</div>
+                    <div class="option">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="package1" name="addoptions[]" id="" value="조식">
+                                <label for="package1">Daily Breakfast Buffet for Adult</label> 
+                                <span>30,000 원</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="package2" name="addoptions[]" id="" value="침대">
+                                <label for="package2">Daily Extra bed</label> 
+                                <span>30,000 원</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="infor_option">
+                        <ul>
+                            <li>※ 조식이 포함된 패키지를 예약하실 경우 추가 인원에 대한 조식만 선택해주시기 바랍니다.</li>
+                            <li>※ 37개월 미만의 유아 동반 시 조식에 대한 요금은 무료입니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="title2">추가 요청사항</div>
+                    <textarea name="" id="" rows="3" cols="80" placeholder="공항 교통편 문의 또는 호텔 이용 시 문의하실 사항이 있으시면 입력해 주십시오."></textarea>
+                    <div class="cont2_txt">전망은 체크인 당일 사정에 따라 달라질 수 있습니다.</div>
+                </div>
+                <div class="cont3">
+                    <div class="title3">유의사항</div>
+                    <div class="infor1">
+                        <div class="infor_title">&lt;호텔 이용안내&gt;</div>
+                        <ul>
+                            <li>성인 2인 1실 기준이며, 요금에는 세금 및 봉사료가 부과됩니다.</li>
+                            <li>
+                                기준 인원을 초과하여 투숙 시 추가 인원에 대해 별도의 요금이 부과됩니다.<br>
+                                (성인 기준: 만 13세 이상, 어린이 기준: 37개월 이상~만 12세 이하)
+                            </li>
+                            <li>
+                                37개월 미만의 유아 동반 시 추가 인원 요금 및 조식은 무료이며,<br>
+                                유아(37개월 미만)동반 여부는 체크인 시 알려주셔야<br>
+                                무료로 이용 가능합니다.
+                            </li>
+                            <li>체크인은 오후 3시, 체크아웃은 정오까지입니다.</li>
+                            <li>
+                                본 홈페이지 요금은 할인 적용된 요금이며, 중복 할인은 적용되지 않습니다.<br>
+                                자세한 객실안내는 02-8282-5959로 문의 바랍니다.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="infor2">
+                        <div class="infor_title">&lt;부대시설 이용안내&gt;</div>
+                        <ul>
+                            <li>체련장(Gym), 실내 수영장, 실내 사우나(유료시설)는 매월 3번째 수요일은 정기휴무입니다.</li>
+                            <li>체련장은 만 16세 이상, 실내 사우나는 만 13세 이상부터 이용 가능합니다.</li>
+                            <li>실내 수영장은 성인 고객 전용 시설로, 만 13세 미만 고객은 주말 및 공휴일에 한해 성인 보호자의 보호 하에 이용 가능합니다.</li>
+                            <li>2018년 어번 아일랜드(야외 수영장) 운영 기간 : 3월 31일 ~ 10월 31일(2017년 11월 01일~2018년 3월 30일까지 미운영)</li>
+                            <li>야외 수영장인 어번 아일랜드는 유료시설로서 입장 혜택이 포함된 상품 외에는 이용 시 입장료가 추가로 부과되며, 사전 예약은 불가합니다.<br>
+                                쾌적하고 안전한 운영을 위해 적정 인원 초과 시 입장이 제한될 수 있습니다.</li>
+                            <li>실내 및 야외 수영장의 성인풀에서는 신장 140cm 미만의 고객은 성인 보호자의 보호 하에 구명조끼 착용 시에만 이용 가능합니다.</li>
+                            <li>성인풀, 키즈풀 및 자쿠지 등의 시설 이용 시 현장 라피으 가드 직원의 안내를 받으시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="button" value="< Step 1" onclick="location.href='#'">
+                    <input type="button" value="비회원 예약" onclick="location.href='step3opt.html'">
+                </div>
+            </div>
+            <!---- sec2 ----->
+            <div class="sec2">
+                <div class="rsvtitle">
+                    <div class="rsvMain">예약정보</div>
+                    <div class="rsvReset">
+                        <a href="#"><img src="img/loading.png" alt="">예약초기화</a>
+                    </div>
+                </div>
+                <div class="rsvhotel">
+                    <div class="hotel">호텔</div>
+                    <div class="hotelname">서울신라호텔</div>
+                </div>
+                <div class="rsvinfo">
+                    <ul>
+                        <li>체크인 <span>2018.03.08</span></li>
+                        <li>체크아웃 <span>2018.03.09</span></li>
+                        <li>숙박일수 <span>1박</span></li>
+                        <li>투숙인원 <span>성인 : 1 어린이 : 0 유아 : 0</span></li>
+                        <li>객실타입 <span>Double</span></li>
+                    </ul>
+                </div>
+                <div class="rsvinfo2">
+                    <div class="rsvinfo2Main">객실/패키지</div>
+                    <div class="rsvroom">Deluxe / Double</div>
+                    <ul>
+                        <li>2018.03.15<span>250,000 원</span></li>
+                    </ul>
+                    <div class="roomprice">250,000 원 (1박)</div>
+                    <div class="roomimg">
+                        <img src="./img/room.png" alt="객실 사진" width="240px">
+                    </div>
+                </div>
+                <div class="rsvoption">
+                    <div class="rsvoptMain">옵션</div>
+                    <ul>
+                        <li>Daily Breakfast Buffet for Adult<span>30,000 원</span></li>
+                        <li>Daily Extra bed<span>30,000 원</span></li>
+                    </ul>
+                </div>
+                <div class="rsvprice">
+                    <ul>
+                        <li>봉사료<span>31,000 원</span></li>
+                        <li>세금<span>34,100 원</span></li>
+                    </ul>
+                    <div class="allprice">
+                        <ul>
+                            <li>요금합계<span>375,100 원</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---- footer ----->
+        <div class="footer">
+            <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+                <address>
+                    서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+                </address>
+            </div>
+        </div>
+    </div>
+    
+    <!---- script ----->
+
+    
+</body>
+</html>
