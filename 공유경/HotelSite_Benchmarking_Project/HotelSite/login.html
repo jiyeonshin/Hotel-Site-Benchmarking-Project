@@ -10,7 +10,35 @@
 </head>
 <body>
     <div id="loginWrap">
-        <div class="header">header</div>
+        <div class="header">
+            <div class="hMenu">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="#">예약</a></li>
+                    </ul>
+                </div>
+            <div class="logo"></div>
+            <div class="right">
+                <div class="upSide">
+                    <ul>
+                        <li><a href="#">예약확인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul>
+                </div>
+            <div class="downSide">
+                <ul>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">고객문의</a></li>
+                    <li><a href="#">호텔소개</a></li>
+                </ul>
+            </div>
+            </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        
         <div class="contents">
             <div class="loginHedaer">
                 <h2>콘래드호텔에 오신 것을 환영합니다</h2>
@@ -27,11 +55,11 @@
                     </ul>
                 </div>
                 <div class="loginType member">
-                    <form class="loginForm" action="">
+                    <form class="loginForm" action="loginOk.php" method="post">
                       <span class="info01"><input type="text" name="conrad_number_or_id" placeholder="콘래드 번호 또는 아이디를 입력해 주세요." onfocus="this.value=''" ></span>
                       <span class="info02"><input type="password" name="conrad_number_or_password" placeholder="비밀번호를 입력해 주세요" onfocus="this.value=''"></span>
                       <span class="info03">
-                            <input class="idCheck" type="checkbox" id="idSave" name="subscribe" value="">
+                            <span class="idCheck"><input type="checkbox" id="idSave" name="subscribe" value=""></span>
                             <label for="idSave">아이디저장</label>
                       </span>
                       <span class="goLogin"><input class="goLogin" type="submit" value="로그인"></span>
@@ -47,7 +75,7 @@
                     </div>
                 </div>
                 <div class="loginType nonMembers">
-                    <form class="loginForm" action="">
+                    <form class="loginForm" action="loginOk.php" method="post">
                       <span class="info01"><input type="text" name="conrad_number" placeholder="예약번호를 입력해 주세요." onfocus="this.value=''" ></span>
                       <span class="info02"><input type="text" name="conrad_number" placeholder="FIRST NAME(이름)" onfocus="this.value=''" ></span>
                       <span class="info02"><input type="text" name="conrad_number" placeholder="RIAST NAME(성)" onfocus="this.value=''" ></span>
@@ -61,7 +89,23 @@
             </div>
 
         </div>
-        <div class="footer">footer</div>
+        <div class="footer">
+            <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+            <address>
+                서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+            </address>
+            </div>
+        </div>
     </div>
 </body>
 </html>
