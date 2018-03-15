@@ -7,7 +7,8 @@
 .header {
     width: 100%;
     height: 90px;
-    background: #222;
+    max-height: 90px;
+    background: #181510;
 }
 .contents {
     width: 1000px;
@@ -20,8 +21,86 @@
 }
 .footer {
     width: 100%;
-    height: 184px;
-    background: #222;
+    height: 150px;
+    background: #181510;
+}
+
+/*header 시작*/
+.header .line {
+    width: 100%;
+    height: 9px;
+    background: url(../img/gold_line.png) no-repeat 50%;
+/*
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+*/
+}
+
+.header .hMenu {
+    width: 1200px;
+/*    max-width: 1200px;*/
+    height: 90px;
+    background: #181510;
+    margin: 0 auto;
+}
+
+.header .hMenu .left {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+
+.header .hMenu .left ul li a{
+    float: left;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 55px;
+}
+
+.header .hMenu .logo {
+    width: 30%;
+    height: 90px;
+    float: left;
+    /*border: 1px solid;
+    box-sizing: border-box;*/
+    background: url('../img/hotel_font_center.png') no-repeat 50%;
+    background-size: 300px 150px;
+    cursor: pointer;
+}
+
+.header .hMenu .right {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+
+.header .hMenu .right .upSide {
+    width: 100%;
+    height: 45px;
+    /*background: #ccc;*/
+}
+
+.header .hMenu .right .downSide {
+    width: 100%;
+    height: 45px;
+    /*background: #555;*/
+}
+
+.header .hMenu .right .upSide ul li a{
+    float: right;
+    color: #cbb682;
+    font-size: 13px;
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.header .hMenu .right .downSide ul li a{
+    float: right;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 10px;
+
 }
 
 /*contents - loginHeader 시작*/
@@ -91,10 +170,6 @@
   line-height: 50px;
   margin: 15px 0;
 }
-.loginContent .loginType span.info03 input {
-  width: 20px;
-  height: 20px;
-}
 .loginContent .loginType span input {
   width: 100%;
   height: 50px;
@@ -109,6 +184,13 @@
 }
 .loginContent .loginType span input.goLogin:hover {
   cursor: pointer;
+}
+.loginContent .loginType span.info03 span.idCheck {
+    display: inline;
+}
+.loginContent .loginType span.info03 span.idCheck input {
+    width: 20px;
+    height: 20px;
 }
 .loginContent .loginType .findAccount {
   width: 100%;
@@ -154,6 +236,41 @@
   box-sizing: border-box;
 }
 
+/*footer 시작*/
+.footer .footer_content {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer img {
+   /* display: block;*/
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.footer ul {
+    padding: 15px auto;
+}
+.footer ul>li {
+    width: 148.5px;
+    float: left;
+    color: #cbb682;
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0;
+}
+.footer ul>li>a {
+    color: #cbb682;
+    font-size: 13px;
+}
+.footer address {
+    width: 100%;
+    height: 50px;
+    color: #785f37;
+    font-size: 12px;
+    text-align: center;
+}
 
 
 /*input태그 focus 하면 placehold 내용 사라짐*/
