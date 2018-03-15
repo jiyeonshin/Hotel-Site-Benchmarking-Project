@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+#loginWrap {
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 100%;
+    height: 90px;
+    background: #222;
+}
+.contents {
+    width: 1000px;
+    height: auto;
+    margin: 100px auto;
+/*
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+*/
+}
+.footer {
+    width: 100%;
+    height: 184px;
+    background: #222;
+}
+
+/*contents - loginHeader 시작*/
+.loginHedaer {
+    text-align: center;
+    margin: 50px 0;
+}
+.loginHedaer h2 {
+  font-size: 30px;
+  color: #865009;
+  margin-bottom: 20px;
+}
+.loginHedaer p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #555;
+}
+
+/*contents - loginContent 시작*/
+.loginContent {
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.loginContent .loginmenu {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.loginContent .loginmenu ul>li {
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    border: solid 1px #D9D9D9;
+    border-bottom: solid 1px #9F876B;
+    box-sizing: border-box;
+    background: #F6F6F6;
+    font-size: 18px;
+    color: #555;
+}
+.loginContent .loginmenu ul>li:hover {
+    cursor: pointer;
+}
+.loginContent .loginmenu .on {
+    color: #9F876B;
+    background: #fff;
+    border: solid 1px #9F876B;
+    border-bottom: none;
+}
+
+/*contents - loginContent - loginType 시작*/
+.loginContent .loginType {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+    background: #fff;
+}
+.loginContent .loginType.nonMembers {
+    display: none;
+}
+.loginContent .loginType .loginForm span {
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 50px;
+  margin: 15px 0;
+}
+.loginContent .loginType span.info03 input {
+  width: 20px;
+  height: 20px;
+}
+.loginContent .loginType span input {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+.loginContent .loginType span input.goLogin {
+  font-size: 18px;
+  background: #9F876B;
+  color: #EBE0C0;
+}
+.loginContent .loginType span input.goLogin:hover {
+  cursor: pointer;
+}
+.loginContent .loginType .findAccount {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #555;
+  padding: 20px 0 30px 0;
+  border-bottom: solid 1px #ccc;
+}
+.loginContent .findAccount a {
+  color: #555;
+}
+.loginContent .findAccount a:hover {
+  text-decoration: underline;
+}
+.loginContent .findAccount span.bar {
+  margin: 0 30px;
+}
+.loginContent .joinBtn {
+  width: 100%;
+  height: auto;
+}
+.loginContent .joinBtn span{
+  display: block;
+  margin: 30px 0 20px;
+}
+.loginContent .joinBtn button {
+  width: 100%;
+  height: 50px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin: 10px 0;
+}
+.loginContent .joinBtn button:hover {
+  cursor: pointer;
+  background: #F6F6F6;
+  border: solid 1px #9F876B;
+  box-sizing: border-box;
+}
+
+
+
+/*input태그 focus 하면 placehold 내용 사라짐*/
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    /* WebKit browsers */ color:transparent;
+}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */ color:transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    /* Mozilla Firefox 19+ */ color:transparent;
+}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+    /* Internet Explorer 10+ */ color:transparent; }

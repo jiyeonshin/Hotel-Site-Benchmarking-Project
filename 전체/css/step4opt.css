@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+#wrap {
+    width : 100%;
+    height : auto;
+}
+.header {
+    width: 100%;
+    height: 90px;
+    max-height: 90px;
+    background: #181510;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.nav {
+    width : 1200px;
+    height : 150px;
+    margin : 0 auto;
+    background : #a6efa60;
+    position : relative;
+    left : 0;
+    top : 90px;
+}
+.contents {
+    width : 1200px;
+    height : auto;
+    margin : 0 auto;
+    background : #ff00;
+    overflow : hidden;
+    margin-bottom : 100px;
+    margin-top : 90px;
+    
+    
+}
+.footer {
+    width: 100%;
+    height: 150px;
+    background: #181510;
+
+}
+/*---- Header 시작 ----*/
+.header .line {
+    width: 100%;
+    height: 9px;
+    background: url(../img/gold_line.png) no-repeat 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header .hMenu {
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+    background: #181510;
+    margin: 0 auto;
+}
+
+.header .hMenu .left {
+    width: 35%;
+    height: 90px;
+    float: left;
+
+
+}
+
+.header .hMenu .left ul li a{
+    float: left;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 55px;
+}
+
+.header .hMenu .logo {
+    width: 30%;
+    height: 90px;
+    float: left;
+    cursor: pointer;
+
+    background: url('../img/hotel_font_center.png') no-repeat 50%;
+    background-size: 300px 150px;
+
+}
+
+.header .hMenu .right {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+
+.header .hMenu .right .upSide {
+    width: 100%;
+    height: 45px;
+}
+
+.header .hMenu .right .downSide {
+    width: 100%;
+    height: 45px;
+}
+
+.header .hMenu .right .upSide ul li a{
+    float: right;
+    color: #cbb682;
+    font-size: 13px;
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.header .hMenu .right .downSide ul li a{
+    float: right;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 10px;
+
+}
+
+/*---- nav 시작 ----*/
+.nav .step {
+    width : 100%;
+    height : 60px;
+    border-bottom : 4px solid #A1886F;
+    position : absolute;
+    bottom : 40px;
+}
+.nav .step>ul {
+    overflow: hidden;
+}
+.nav .step>ul>li {
+    width : 300px;
+    line-height: 60px;
+    float : left;
+    background : #ccc0;
+}
+.nav .step>ul>li a {
+    display: block;
+    color : #B3A28F;
+}
+.nav .step>ul>li span.step_bold {
+    font-weight: bold;
+    padding-left : 20px;
+    margin-right : 10px;
+}
+.nav .step>ul>li .arrow {
+    width : 30px;
+    height : 60px;
+    float : right;
+    background : #f00;
+    background : url(../img/arrow.PNG) no-repeat 50%;
+    background-size: 60%;
+    opacity: 0.5;
+}
+
+/*---- 현재 페이지 단계 ----*/
+.nav .step>ul>li:nth-child(4) {
+    color : #785f37;
+    font-weight: bold;
+}
+
+/*---- contents 시작 ----*/
+.contents .cont {
+    width : 1000px;
+    height : 400px;
+    margin : 150px auto 0;
+    background : #ccc0;
+    border-top : 2px solid #E9DBBD;
+    border-bottom : 2px solid #E9DBBD;
+}
+.contents .cont .sec1 {
+    line-height : 270px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color : #785f37;
+    background : #ccc0;
+}
+.contents .cont .sec2 {
+    height : 130px;
+    text-align: center;
+    font-size : 23px;
+    font-weight: bold;
+    background : #ff00;
+}
+
+.contents .button {
+    width : 1000px;
+    height : 150px;
+    background : #ccc0;
+    margin : 30px auto;
+    
+}
+.contents .button input[type="button"] {
+    width : 185px;
+    height : 50px;
+    background : #785f37;
+    color : #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border : 0px;
+/*    margin-left : 215px;*/
+}
+.contents .button input[type="button"]:nth-child(1) {
+    margin-left : 215px;
+    margin-right : 200px;
+}
+
+/*---- footer 시작 ----*/
+.footer .footer_content {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer img {
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.footer ul {
+    padding: 15px auto;
+}
+.footer ul>li {
+    width: 148.5px;
+    float: left;
+    color: #cbb682;
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0;
+}
+.footer ul>li>a {
+    color: #cbb682;
+    font-size: 13px;
+}
+.footer address {
+    width: 100%;
+    height: 50px;
+    color: #785f37;
+    font-size: 12px;
+    text-align: center;
+}

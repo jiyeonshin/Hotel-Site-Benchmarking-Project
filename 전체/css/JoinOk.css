@@ -1,0 +1,199 @@
+#wrap {
+    width: 100%;
+    height: auto;
+    /*border: 1px solid;*/
+    margin: 0 auto;
+    font-family: "맑은 고";
+}
+#contents {
+    width: 1200px;
+    height: 900px;
+    /*border: 1px solid;*/
+    margin: 0 auto;
+    color: #181510;
+}
+
+
+/*header시작*/
+.header {
+    width: 100%;
+    height: 90px;
+    max-height: 90px;
+    background: #181510;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.header .line {
+    width: 100%;
+    height: 9px;
+    background: url(../img/gold_line.png) no-repeat 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header .hMenu {
+    width: 1200px;
+    height: 90px;
+    background: #181510;
+    margin: 0 auto;
+}
+.header .hMenu .left {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+.header .hMenu .left ul li a{
+    float: left;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 55px;
+}
+.header .hMenu .logo {
+    width: 30%;
+    height: 90px;
+    float: left;
+    /*border: 1px solid;
+    box-sizing: border-box;*/
+    background: url('../img/hotel_font_center.png') no-repeat 50%;
+    background-size: 300px 150px;
+}
+.header .hMenu .right {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+.header .hMenu .right .upSide {
+    width: 100%;
+    height: 45px;
+    /*background: #ccc;*/
+}
+.header .hMenu .right .downSide {
+    width: 100%;
+    height: 45px;
+    /*background: #555;*/
+}
+.header .hMenu .right .upSide ul li a{
+    float: right;
+    color: #cbb682;
+    font-size: 13px;
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.header .hMenu .right .downSide ul li a{
+    float: right;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 10px;
+
+}
+
+
+/*nav시작*/
+nav {
+    display: block;
+    margin: 200px auto 100px;
+}
+nav span.txtLeft {
+    display: block;
+    float: left;
+    font-size: 25px;
+    margin-left: 50px;
+    
+}
+nav span.txtRight {
+    display: block;
+    text-align: right;
+    margin-right: 50px;
+}
+
+/*section시작*/
+section {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+section hr {
+    width: 1000px;
+    border: solid 1px #cbb682;
+    margin: 80px 0px;
+}
+section strong {
+    display: block;
+    color: #785f37;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+section p {
+    color: #181510;
+    text-align: center;
+}
+section form {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+}
+section input.btnMain,input.btnLogin {
+    width: 100px;
+    height: 30px;
+    background: #785f37;
+    color: #e9dbbd;
+    margin: 0 10px;
+}
+/*
+section input[type=submit] {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+}*/
+
+
+/*footer시작*/
+footer {
+    width: 100%;
+    height: 150px;
+    background: #181510;
+}
+footer .footer_content {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+footer img {
+   /* display: block;*/
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+footer ul {
+    padding: 15px auto;
+}
+footer ul>li {
+    width: 148.5px;
+    float: left;
+    color: #cbb682;
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0;
+}
+footer ul>li>a {
+    color: #cbb682;
+    font-size: 13px;
+}
+footer address {
+    width: 100%;
+    height: 50px;
+    color: #785f37;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
