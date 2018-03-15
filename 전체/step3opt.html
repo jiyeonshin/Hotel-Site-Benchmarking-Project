@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STEP3 고객정보 입력</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/step3opt.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="hMenu">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="#">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo" onclick="location.href='#'">
+                </div>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">고객문의</a></li>
+                            <li><a href="#">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <!---- nav ----->
+        <div class="nav">
+            <div class="step">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="step_bold">STEP1</span>
+                            날짜/인원/객실 선택
+                            <div class="arrow"></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="step2opt.html">
+                            <span class="step_bold">STEP2</span>
+                            옵션 선택
+                            <div class="arrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP3</span>
+                        고객 정보 입력
+                        <div class="arrow"></div>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP4</span>
+                        예약 완료
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---- section ----->
+        <div class="contents">
+            <div class="sec1">
+                <div class="cont1">
+                    <div class="title">고객 정보 입력</div>
+                    <div class="subtitle">
+                        <div class="arstric">&#42;</div>
+                        표시 필수 입력사항
+                    </div>
+                    <div class="custominfo">
+                        <ul>
+                            <li>
+                               <p>투숙자 정보 입력</p>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>성명(한글)</dt>
+                                    <dd><input type="text" name="userkrname" id="userkrname" class="username" maxlength="30"></dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>성명(영문)</dt>
+                                    <dd>
+                                        <input type="text" name="userEngname" id="userEngname1" placeholder="FIRST NAME(이름)" size="10" class="firstname" maxlength="15">
+                                        <input type="text" name="userEngname" id="userEngname2" placeholder="LAST NAME(성)" size="10" class="lastname" maxlength="15">
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>지역(여권기준)</dt>
+                                    <dd>
+                                        <select name="country" class="country">
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CN">China</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="EU">European Union</option>
+                                        <option value="FR">France</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="IN">India</option>
+                                        <option value="IR">Iran</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="KR" selected>South Korea</option>
+                                        <option value="NR">North Korea</option>
+                                        <option value="JP">Japan</option>
+                                    </select>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>이메일</dt>
+                                    <dd><input type="text" name="usermail" id="usermail" class="usermail" maxlength="35"></dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>연락처</dt>
+                                    <dd>
+                                        <select name="phone" id="">
+                                            <option value="mobile" selected>휴대전화</option>
+                                            <option value="home">자택</option>
+                                        </select>
+                                        <input type="text" name="userphone" id="userphone" class="userphone" maxlength="20">
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <p>카드 정보 입력</p>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>카드종류</dt>
+                                    <dd>
+                                        <select name="cardname" id="" class="cardname">
+                                            <option value="" selected>선택</option>
+                                            <option value="BC">BC Card</option>
+                                            <option value="CB">Citibank Card</option>
+                                            <option value="HD">Hyundai Card</option>
+                                            <option value="KM">Kookmin Card</option>
+                                            <option value="LT">Lotte Card</option>
+                                            <option value="MA">Master Overseas</option>
+                                            <option value="SH">Shinhan Card</option>
+                                            <option value="SM">Samsung Card</option>
+                                            <option value="VS">Visa Overseas</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>카드번호</dt>
+                                    <dd>
+                                        <input type="text" name="card1" id="" maxlength="4" size="1" class="cardnum"> -
+                                        <input type="text" name="card2" id="" maxlength="4" size="1" class="cardnum"> -
+                                        <input type="text" name="card3" id="" maxlength="4" size="1" class="cardnum"> -
+                                        <input type="text" name="card4" id="" maxlength="4" size="1" class="cardnum">
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <div class="arstric">&#42;</div>
+                                    <dt>만기일</dt>
+                                    <dd>
+                                        <select name="month" class="date">
+                                            <option value="title" selected>월</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select name="year" class="date">
+                                            <option value="title" selected>년</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <div class="cardinfo">
+                                    <span>※</span>
+                                    <div class="cardcont">
+                                        신용카드 정보는 고객님의 투숙에 의한 개런티 외에는 어떤 목적으로도 사용되지 않습니다.<span>온라인 예약 시 직접 결제가 이루어지지 않으며,</span><br>
+                                        최종 결제는 체크아웃 시 프런트 데스크에서 해주시기 바랍니다.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cont2">
+                    <ul>
+                        <li>취소/변경 및 노쇼(No-show) 안내</li>
+                        <li>숙박 예정일 1일 전 18시까지는 위약금 없이 취소 및 변경이 가능합니다.</li>
+                        <li>숙박 예정일 1일 전 18시 이후 취소/변경 및 노쇼(No-show) 발생 시,</li>
+                        <li>- 성수기(5월~10월, 12월 24일~31일) : 최초 1일 숙박 요금의 80%가 위약금으로 부과됩니다.</li>
+                        <li>- 비수기(성수기 외 기간) : 최초 1일 숙박 요금의 10%가 위약금으로 부과됩니다.</li>
+                    </ul>
+                </div>
+                <div class="cont3">
+                    <div class="title3">유의사항</div>
+                    <div class="infor1">
+                        <div class="infor_title"><호텔 이용안내></div>
+                        <ul>
+                            <li>성인 2인 1실 기준이며, 요금에는 세금 및 봉사료가 부과됩니다.</li>
+                            <li>
+                                기준 인원을 초과하여 투숙 시 추가 인원에 대해 별도의 요금이 부과됩니다.<br>
+                                (성인 기준: 만 13세 이상, 어린이 기준: 37개월 이상~만 12세 이하)
+                            </li>
+                            <li>
+                                37개월 미만의 유아 동반 시 추가 인원 요금 및 조식은 무료이며,<br>
+                                유아(37개월 미만)동반 여부는 체크인 시 알려주셔야<br>
+                                무료로 이용 가능합니다.
+                            </li>
+                            <li>체크인은 오후 3시, 체크아웃은 정오까지입니다.</li>
+                            <li>
+                                본 홈페이지 요금은 할인 적용된 요금이며, 중복 할인은 적용되지 않습니다.<br>
+                                자세한 객실안내는 02-8282-5959로 문의 바랍니다.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="infor2">
+                        <div class="infor_title"><부대시설 이용안내></div>
+                        <ul>
+                            <li>체련장(Gym), 실내 수영장, 실내 사우나(유료시설)는 매월 3번째 수요일은 정기휴무입니다.</li>
+                            <li>체련장은 만 16세 이상, 실내 사우나는 만 13세 이상부터 이용 가능합니다.</li>
+                            <li>실내 수영장은 성인 고객 전용 시설로, 만 13세 미만 고객은 주말 및 공휴일에 한해 성인 보호자의 보호 하에 이용 가능합니다.</li>
+                            <li>2018년 어번 아일랜드(야외 수영장) 운영 기간 : 3월 31일 ~ 10월 31일(2017년 11월 01일~2018년 3월 30일까지 미운영)</li>
+                            <li>야외 수영장인 어번 아일랜드는 유료시설로서 입장 혜택이 포함된 상품 외에는 이용 시 입장료가 추가로 부과되며, 사전 예약은 불가합니다.<br>
+                                쾌적하고 안전한 운영을 위해 적정 인원 초과 시 입장이 제한될 수 있습니다.</li>
+                            <li>실내 및 야외 수영장의 성인풀에서는 신장 140cm 미만의 고객은 성인 보호자의 보호 하에 구명조끼 착용 시에만 이용 가능합니다.</li>
+                            <li>성인풀, 키즈풀 및 자쿠지 등의 시설 이용 시 현장 라피으 가드 직원의 안내를 받으시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="button" value="< Step 2" onclick="location.href='step2opt.html'">
+                    <input type="button" value="예약신청" onclick="location.href='step4opt.html'">
+                </div>
+            </div>
+            <!---- sec2 ----->
+            <div class="sec2">
+                <div class="rsvtitle">
+                    <div class="rsvMain">예약정보</div>
+                    <div class="rsvReset">
+                        <a href="#"><img src="img/loading.png" alt="">예약초기화</a>
+                    </div>
+                </div>
+                <div class="rsvhotel">
+                    <div class="hotel">호텔</div>
+                    <div class="hotelname">서울신라호텔</div>
+                </div>
+                <div class="rsvinfo">
+                    <ul>
+                        <li>체크인 <span>2018.03.08</span></li>
+                        <li>체크아웃 <span>2018.03.09</span></li>
+                        <li>숙박일수 <span>1박</span></li>
+                        <li>투숙인원 <span>성인 : 1 어린이 : 0 유아 : 0</span></li>
+                        <li>객실타입 <span>Double</span></li>
+                    </ul>
+                </div>
+                <div class="rsvinfo2">
+                    <div class="rsvinfo2Main">객실/패키지</div>
+                    <div class="rsvroom">Deluxe / Double</div>
+                    <ul>
+                        <li>2018.03.15<span>250,000 원</span></li>
+                    </ul>
+                    <div class="roomprice">250,000 원 (1박)</div>
+                    <div class="roomimg">
+                        <img src="./img/room.png" alt="객실 사진" width="220px" height="100">
+                    </div>
+                </div>
+                <div class="rsvoption">
+                    <div class="rsvoptMain">옵션</div>
+                    <ul>
+                        <li>Daily Breakfast Buffet for Adult<span>30,000 원</span></li>
+                        <li>Daily Extra bed<span>30,000 원</span></li>
+                    </ul>
+                </div>
+                <div class="rsvprice">
+                    <ul>
+                        <li>봉사료<span>31,000 원</span></li>
+                        <li>세금<span>34,100 원</span></li>
+                    </ul>
+                    <div class="allprice">
+                        <ul>
+                            <li>요금합계<span>375,100 원</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---- footer ----->
+        <div class="footer">
+            <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+                <address>
+                    서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+                </address>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

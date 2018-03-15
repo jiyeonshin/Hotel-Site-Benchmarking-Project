@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JoinPage</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Join.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="javascript" src="js/Join.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="hMenu">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="#">예약</a></li>
+                    </ul>
+                </div>
+                 <a href="index_main.html"><div class="logo"></div></a>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="JoinPage.html">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">고객문의</a></li>
+                            <li><a href="#">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+
+            </div>
+        </div>
+        <div id="contents">
+        <nav>
+            <span class="txtLeft">회원가입</span>
+            <span class="txtRight">홈>회원가입</span>
+        </nav>
+        <section>
+            <form action="#" method="post" name="ConradJoin">
+                <div class="secTable">
+                     <table>
+                        <tr>
+                            <td>웹사이트ID/PW</td>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr class="tr_num1">
+                            <td colspan="4">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="num1"><label for="userNum">고객번호</label></td>
+                            <td class="num2">자동으로 생성됩니다.</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userID">아이디</label></td>
+                            <td colspan="2">
+                                <input type="text" name="userID" minlength="5" maxlength="12" size="15">
+                                <input class="butId" type="button" value="아이디 중복확인">
+                            </td>
+                            <td><p>5~12자 이내 영문 또는 영문/숫자 조합</p></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userPW">비밀번호</label></td>
+                            <td colspan="2">
+                                <input type="password" name="userPW" minlength="5" maxlength="20" size="15">
+                                <span>비밀번호입력안내</span>
+                            </td>
+                            <td><p>8~20자 이내 영문/숫자 조합</p></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userPWok">비밀번호 확인</label></td>
+                            <td><input type="password" name="userPWok" minlength="5" maxlength="20" size="15"></td>
+                            <td colspan="2"><font name="PWcheck" size="2"></font></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><p>기본정보</p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userNAME">성명(한글)</label></td>
+                            <td><input type="text" name="userNAME" size="15"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userGender">성별</label></td>
+                            <td>
+                                <input type="radio" name="userGender" id="Man" checked>남자
+                                <input type="radio" name="userGender" id="Woman">여자
+                            </td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userYear">생년월일</label></td>
+                            <td colspan="3">
+                                <select name="userYear"> 
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993" selected>1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                                <option value="1979">1979</option>
+                                <option value="1978">1978</option>
+                                <option value="1977">1977</option>
+                                <option value="1976">1976</option>
+                                <option value="1975">1975</option>
+                                <option value="1974">1974</option>
+                                <option value="1973">1973</option>
+                                <option value="1972">1972</option>
+                            </select>년
+                            <select name="userBirth_month">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>월
+                            <select name="userBirth_day">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>일
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userEmail">이메일</label></td>
+                            <td colspan="3">
+                                <input type="text" name="userEmail" size="15">@
+                                <input id="Email" type="text" name="userEmail" size="15">
+                                <select name="userEmail1"> 
+                                    <option value="선택하기" selected>선택하기</option>
+                                    <option value="naver">naver.com</option>
+                                    <option value="daum">daum.net</option>
+                                    <option value="gmail">gmail.com</option>
+                                    <option value="hanmail">hanmail.net</option>
+                                    <option value="1">직접입력</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userPhone1">휴대전화</label></td>
+                            <td colspan="3">
+                                <select name="userPhone1"> 
+                                    <option value="010" selected>010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="019">019</option>
+                                </select> -
+                                <input type="text" name="userPhone2" maxlength="4" size="4"> -
+                                <input type="text" name="userPhone3" maxlength="4" size="4"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="userAddress1">주소</label></td>
+                            <td colspan="4">
+                                <input type="text" name="userAddress1" maxlength="5" size="5">
+                                <input type="button" value="주소찾기"><br>
+                                <input type="text" name="userAddress2" size="80">
+                                <input type="text" name="userAddress3" size="80">
+                            </td>
+                        </tr>
+                    </table>
+                 </div>
+                <div class="secButton">
+                    <a href="JoinOkPage.html"><input type="button" value="가입신청" id="btn" onclick="JoinChk"></a>
+                </div>
+               
+            </form>
+        </section>
+        </div>
+         <footer>
+           <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+                <address>
+                    서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
