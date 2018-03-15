@@ -1,0 +1,55 @@
+.nav {
+    width : 1200px;
+    height : 150px;
+    margin : 0 auto;
+    background : #a6efa60;
+    position : relative;
+    left : 0;
+    top : 0;
+}
+.nav .step {
+    width : 100%;
+    height : 60px;
+    border-bottom : 4px solid #CDCBBE;
+    position : absolute;
+    bottom : 40px;
+}
+.nav .step>ul {
+    overflow: hidden;
+}
+.nav .step>ul>li {
+    width : 300px;
+    line-height: 60px;
+    float : left;
+    background : #ccc0;
+}
+.nav .step>ul>li {
+    display: block;
+    color : #B3A28F;
+}
+.nav .step>ul>li span.step_bold {
+    font-weight: bold;
+    padding-left : 20px;
+    margin-right : 10px;
+}
+.nav .step>ul>li .arrow {
+    width : 30px;
+    height : 60px;
+    float : right;
+    background : #f00;
+    background : url(../img/arrow.PNG) no-repeat 50%;
+    background-size: 60%;
+    opacity: 0.5;
+}
+
+/* 현재 페이지 단계 */
+.nav .step>ul>li:nth-child(1) {
+    border-bottom : 4px solid #A1886F;
+}
+.nav .step>ul>li:nth-child(1) {
+    color : #785f37;
+    font-weight: bold;
+}
+.nav .step>ul>li:nth-child(1) .arrow {
+    opacity: 1;
+}

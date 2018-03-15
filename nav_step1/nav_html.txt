@@ -1,0 +1,27 @@
+<div class="nav">
+            <div class="step">
+                <ul>
+                    <li>
+                        <span class="step_bold">STEP1</span>
+                        날짜/인원/객실 선택
+                        <div class="arrow"></div>
+                    </li>
+
+                    <li>
+                        <span class="step_bold">STEP2</span>
+                        옵션 선택
+                        <div class="arrow"></div>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP3</span>
+                        고객 정보 입력
+                        <div class="arrow"></div>
+                    </li>
+                    <li>
+                        <span class="step_bold">STEP4</span>
+                        예약 완료
+                    </li>
+
+                </ul>  
+            </div>
+        </div>
