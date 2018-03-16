@@ -1,0 +1,522 @@
+@charset"utf-8";
+#wrap {
+    width: 100%;
+    height: 100%;
+
+/*    background: #ff0;*/
+}
+
+/*
+.header {
+    width: 100%;
+    height: 90px;
+    background: #555;
+}
+*/
+
+
+
+
+.header {
+    width: 100%;
+    height: 90px;
+    max-height: 90px;
+    background: #181510;
+    position: fixed;
+    left: 0;
+    top:0;
+    
+    z-index: 5;
+   
+}
+
+
+
+
+.section {
+    width: 100%;
+    height: auto;
+/*    background: #555;*/
+/*    border: 10px solid;*/
+    box-sizing: border-box;
+    
+}
+.main{
+    margin: 0 auto; 
+    width:auto;
+    height:auto;
+    overflow: hidden;
+   
+    
+    
+}
+
+
+
+.footer {
+    width: 100%;
+    height: auto;
+    background: #555;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+
+
+/*header시작*/
+.header .line {
+    width: 100%;
+    height: 9px;
+    background: url(../img/gold_line.png) no-repeat 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.header .hMenu {
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+    background: #181510;
+    margin: 0 auto;
+}
+
+.header .hMenu .left {
+    width: 35%;
+    height: 90px;
+    float: left;
+
+
+}
+
+.header .hMenu .left ul li a{
+    float: left;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 55px;
+}
+
+.header .hMenu .logo {
+    width: 30%;
+    height: 90px;
+    float: left;
+    /*border: 1px solid;
+    box-sizing: border-box;*/
+    background: url('../img/hotel_font_center.png') no-repeat 50%;
+    background-size: 300px 150px;
+
+}
+
+.header .hMenu .right {
+    width: 35%;
+    height: 90px;
+    float: left;
+}
+
+.header .hMenu .right .upSide {
+    width: 100%;
+    height: 45px;
+    /*background: #ccc;*/
+}
+
+.header .hMenu .right .downSide {
+    width: 100%;
+    height: 45px;
+    /*background: #555;*/
+}
+
+.header .hMenu .right .upSide ul li a{
+    float: right;
+    color: #cbb682;
+    font-size: 13px;
+    margin-right: 10%;
+    margin-top: 5px;
+}
+
+.header .hMenu .right .downSide ul li a{
+    float: right;
+    color: #cbb682;
+    margin-right: 10%;
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+/*section 시작*/
+
+
+
+.section .main .reserve {
+  
+   height: 730px;
+text-align: center;
+    font-size:20px;
+    line-height:35;
+    
+    color:#311212;   
+/*   background: #5ff; */
+    
+}
+
+
+
+
+.section .main .contents {
+    width: 1200px;
+    height: 200px;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    
+}
+
+.section .main .contents .step {
+    width: auto;
+    height: auto;
+   margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px;            //
+    
+
+}
+
+.section .main .contents .step > ul > li {
+    width: 300px;
+    height: 50px;
+    border-bottom: 3px solid #a08c5b;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    color: #785f37;
+    
+   
+}
+
+.section .main .contents .step > ul > li span {
+    font-weight: bold;
+}
+
+
+
+.contents .step>ul>li .arrow {
+    width : 30px;
+    height : 60px;
+    float : right;
+    background : #f00;
+    background : url(../img/arrow.PNG) no-repeat 50%;
+    background-size: 60%;
+    opacity: 0.5;
+}
+
+
+
+.section .main .nav {
+    width: 1200px;
+    height: 150px;
+    background: #e9dbbd;
+    margin: 0 auto;
+        position: relative;
+    left: 0;
+    top: 0;
+  
+}
+
+.section .main .nav > .liv {
+    width: 100%;
+    height: 135px;
+
+    border: 0px solid;
+    position : relative;
+    left : 0;
+    top : 0;
+}
+
+
+.section .main .nav .liv .menu1{
+    position: absolute;
+    top:65px;
+    left:80px;
+    
+    
+}
+
+
+
+
+
+
+
+.section .main .nav .liv .menu1 .text{
+    position: absolute;
+    top:-30px;
+    left:10px;
+    
+    
+}
+
+
+
+
+
+
+.section .main .nav .liv .rightmenu{
+   position:absolute;
+       
+    left:330px;
+    top:33px;
+  
+}
+
+
+
+
+.section .main .nav .liv > .menu1 > select {
+/*
+    position:absolute;
+    top:80px;
+    background: #555;
+*/
+    
+    width: 180px;
+    height: 50px;
+    float: left;
+    
+}
+
+
+.section .main .nav .liv .menu2 {
+    width: 150px;
+    height: 20px;
+    float: left;
+
+
+    position:relative;
+    top:0px;
+    left:0px;
+
+
+
+
+
+}
+
+
+
+
+
+
+.section .main .nav .liv .font .menu2 .checkin {
+
+height: auto;
+    font-size: 30px;
+    float: left;
+    position:absolute;
+    top:50px;
+
+    
+}
+.section .main .nav .liv .font .menu2 .day{
+    position:absolute;
+    top:25px;
+    left: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.section .main .nav .liv .font .menu2 .day {
+    font-size: 50px;
+
+
+}
+
+.section .main .nav .liv .font .menu3 .day {
+    /*
+     position: absolute;
+    bottom:860px;
+*/
+    float: left;
+    font-size: 50px;
+
+
+}
+
+.section .main .nav .liv{
+    overflow: hidden;
+}
+
+.section .main .nav .liv .menu3 {
+    width: 140px;
+    height: 20px;
+    float: left;
+    position: relative;
+    left : 0;
+    top : 0;
+
+}
+
+.section .main .nav .liv .menu3.user{
+    width:100%;
+    
+}
+
+
+.section .main .nav .liv .menu3 input {
+    width: 30%;
+    height: 25px;
+     float: left; 
+    
+    font-size: 22px;
+    text-align: center;
+    margin: 5px 55px;
+
+    
+}
+.section .main .nav .liv .menu3 .day {
+    width: 50%;
+    height: auto;
+    /* float: left; */
+/*    overflow: hidden;*/
+    font-size: 22px;
+    text-align: center;
+    position : absolute;
+    top : 25px;
+    left : -20px;
+   
+
+    
+}
+
+
+
+
+
+
+
+/*
+
+.section .main .nav .liv .font .menu3 .user dd {
+    font-size: 50px;
+
+
+}
+*/
+
+
+
+
+
+.section .main .nav .liv .menu4 {
+    /*    display: block;*/
+    width: 15%;
+    line-height: 50px;
+
+    height: 50px;
+    background: #000;
+    color: #fff;
+    /*    margin: 10px auto ;*/
+    /*    padding-left: 100px;*/
+    text-align: center;
+   float: left;
+
+
+/*    line-height: 80px;*/
+    position: absolute;
+    top: 20px;
+    left: 700px;
+
+
+}
+
+
+
+.section .main .nav .liv .menu4 span.search:hover {
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+.section .main .nav .liv > .menu1 .user input {
+
+    width: 40px;
+    height: 50px;
+    margin-left: 50px;
+    float: left;
+
+}
+
+
+
+/*footer시작*/
+
+/*footer시작*/
+footer {
+    width: 100%;
+    height: 150px;
+    background: #181510;
+}
+footer .footer_content {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+footer img {
+   /* display: block;*/
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+footer ul {
+    padding: 15px auto;
+}
+footer ul>li {
+    width: 148.5px;
+    float: left;
+    color: #cbb682;
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0;
+}
+footer ul>li>a {
+    color: #cbb682;
+    font-size: 13px;
+}
+footer address {
+    width: 100%;
+    height: 50px;
+    color: #785f37;
+    font-size: 12px;
+    text-align: center;
+}
+
+
