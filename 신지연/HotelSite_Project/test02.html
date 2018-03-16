@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fullpage Scrolling plugin with jQeury</title>
+    <link rel="stylesheet" href="CSS/test02.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+    <div id="fullpage">
+
+        <section class="section sec1">
+            <h1>Section1</h1>
+        </section>
+        <section class="section sec2">
+            <h1>Section2</h1>
+        </section>
+        <section>
+            <h1>Section3</h1>
+        </section>
+        <section>
+            <h1>Section4</h1>
+        </section>
+        <section>
+            <h1>Section5</h1>
+        </section>
+
+    </div>
+
+
+    <script>
+        window.onload = function () {
+            $(".section").each(function () {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } else if (event.detail) delta = -event.detail / 3;
+                    var moveTop = null;
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(this).next() != undefined) {
+                            moveTop = $(this).next().offset().top;
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(this).prev() != undefined) {
+                            moveTop = $(this).prev().offset().top;
+                        }
+                    }
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+                    /*$(window).scroll(function() {
+
+                        var offset = $(".sec2").offset();
+                        
+
+                        
+                        if ($(this).scrollTop() == 100) {
+                            $('html,#fullpage').animate({
+                                scrollTop: '+=947'
+                                
+                            });
+                            console.log($(this).scrollTop());
+                        }
+                    });*/
+
+
+
+
+
+
+                    //        $(window).scroll(function() {
+                    //            console.log($(this).scrollTop());
+                    //            console.log($('.sec2').offset());
+                    //
+                    //
+                    //            var targetPoint = $('.sec1').offset();
+                    //            console.log(targetPoint);
+                    //
+                    //            if ($(this).scrollTop() >= 100) {
+                    //                $(".header").addClass('animate');
+                    //                $('.menu_txt').fadeIn(2000);
+                    //
+                    //                targetPoint += 947;
+                    //
+                    //                console.log(targetPoint);
+                    //
+                    //
+                    //
+                    //
+                    //            } else {
+                    //                $(".header").removeClass('animate');
+                    //                $('.menu_txt').fadeOut(2000);
+                    //            }
+                    //        });
+    </script>
+</body>
+
+</html>
