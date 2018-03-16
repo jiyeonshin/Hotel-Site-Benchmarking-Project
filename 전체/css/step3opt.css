@@ -515,12 +515,17 @@
     float : right;
     color : #424242;
 }
-/* sec2 .rsvinfo2 시작 */
+/*---- sec2 .rsvinfo2 시작 ----*/
 .contents .sec2 .rsvinfo2 {
-    height : 250px;
+    width : 240px;
+    height : 280px;
+    margin : 0 auto;
     background : #00f0;
+    border-bottom : 1px dotted #b2b2b2;
+/*
     padding-left : 25px;
     padding-right : 20px;
+*/
 }
 .contents .sec2 .rsvinfo2 .rsvinfo2Main {
     background : #ccc0;
@@ -556,6 +561,7 @@
     padding-bottom: 10px;
     border-top : 1px dotted #b2b2b2;
     border-bottom : 1px dotted #b2b2b2;
+    display: none;
 }
 .contents .sec2 .rsvoption .rsvoptMain {
     background : #ccc0;
