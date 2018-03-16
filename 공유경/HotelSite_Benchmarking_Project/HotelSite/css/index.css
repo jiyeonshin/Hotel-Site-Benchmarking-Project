@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    height: auto;
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+/*header시작*/
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 90px;
+    background: #000;
+    position: fixed;
+}
+
+header .hLeft {
+    width: 33.3%;
+    height: 90px;
+    overflow: hidden;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+    float: left;
+}
+header .hLeft>ul>li {
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+
+header .hLogo {
+    width: 33.4%;
+    height: 90px;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+    float: left;
+}
+header .hLogo>img {
+    display: block;
+    width: 150px;
+    height: 90px;
+}
+
+header .hRight {
+    width: 33.3%;
+    height: 90px;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+    float: left;
+}
+header .hRight .hTop {
+    height: 40px;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+}
+header .hRight .hTop>ul>li {
+    width: 11.6%;
+    font-size: 10px;
+    color: #fff;
+    float: left;
+}
+header .hRight .hBottom {
+    height: 50px;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+}
+
+header .hRight .hBottom>ul>li{
+    color: #fff;
+    float: left;
+}
+
+/*nav시작*/
+nav {
+    margin: 100px auto;
+}
+
+
+/*section시작*/
+section {
+    margin: 100px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
