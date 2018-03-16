@@ -15,7 +15,8 @@
                 <div class="left">
                     <ul>
                         <li><a href="#">호텔찾기</a></li>
-                        <li><a href="#">예약</a></li>
+                        <li><a href="reservation2.html" class="menu_txt">예약</a></li>
+
                     </ul>
                 </div>
             <div class="logo" onclick="location.href='#'"></div>
@@ -24,7 +25,7 @@
                     <ul>
                         <li><a href="login.html">예약확인</a></li>
                         <li><a href="JoinPage.html">회원가입</a></li>
-                        <li><a href="#">로그인</a></li>
+                        <li><a href="login.html">로그인</a></li>
                     </ul>
                 </div>
             <div class="downSide">
@@ -38,7 +39,7 @@
             </div>
             <div class="line"></div>
         </div>
-        
+
         <div class="contents">
             <div class="loginHedaer">
                 <h2>콘래드호텔에 오신 것을 환영합니다</h2>
@@ -50,7 +51,7 @@
             <div class="loginContent">
                 <div class="loginmenu">
                     <ul>
-                        <li class="clickMember">회원</li>
+                        <li class="clickMember on">회원</li>
                         <li class="clickNonMembers">비회원(예약확인)</li>
                     </ul>
                 </div>
@@ -107,5 +108,18 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        
+        var frm = document.getElementsByName('conrad_number_or_password');
+        
+        if(frm.value == "" || frm.value == null){
+            alert("값이 비었어!");
+
+            return false;
+        }
+    
+    </script>
+    
 </body>
 </html>
