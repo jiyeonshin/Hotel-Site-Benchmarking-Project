@@ -7,7 +7,129 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/Join.css">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="javascript" src="js/Join.js"></script>
+    <!--<script type="javascript" src="js/Join.js"></script>-->
+    <script>       
+        
+        
+    function JoinChk() {  // 데이터 입력유무 확인 스크립트
+    
+    // 아이디 검사
+    var userId=ConradJoin.userID.value;
+    if(userId.length<5 || userId.length>=13) {
+        alert("아이디는 5글자 이상, 12글자 이하만 가능합니다.");
+        ConradJoin.userID.focus();
+        return false;
+    }
+    
+    // 비밀번호 검사
+    var userPw=ConradJoin.userPW.value;
+        if(userPw.length<8 || userPw.length>=21) {
+        alert("비밀번호는 8글자 이상, 20글자 이하만 가능합니다.");
+        ConradJoin.userPW.focus();
+        return false;
+    }
+
+    // 비밀번호 확인 검사
+    var userPwOk=ConradJoin.userPWok.value;
+        if(userPwOk.length<8 || userPwOk.length>=21) {
+        alert("비밀번호는 8글자 이상, 20글자 이하만 가능합니다.");
+        ConradJoin.userPWok.focus();
+        return false;
+    }
+    
+    var obj = document.getElementsByName("userPW");
+    var obj2 = document.getElementsByName("userPWok");
+
+    if (obj[0].value != obj2[0].value) {
+        document.getElementById('PWcheck').innerText="비밀번호가 일치하지 않습니다.";
+        document.getElementById('PWcheck').style.color="#f00";
+        ConradJoin.userPW.focus();
+        return false;
+    }
+        
+        
+    /*// 비밀번호 일치 여부
+    if(document.getElementsByName('userPW').value != document.getElementsByName('userPWok').value) {
+        document.getElementsById('PWcheck').innerHTML="비밀번호가 일치하지 않습니다.";
+        document.getElementsById('PWcheck').style.color="#f00";
+        document.ConradJoin.userPW.focus();
+        return false;
+    }*/
+
+    //이름 검사
+    var userName=ConradJoin.userNAME.value;
+    if(userName=='' || userName==null) {
+        alert("성함을 입력하세요") 
+        ConradJoin.userNAME.focus(); 
+        return false;
+    }
+    
+    // 이메일 검사
+    var userEamil1=ConradJoin.Email1.value;
+    if(userEamil1=='' || userEamil1==null) {
+        alert("이메일을 입력하세요") 
+        ConradJoin.Email1.focus(); 
+        return false;
+    }
+        
+    /*// 이메일 검사
+    var userEamil2=ConradJoin.Email2.value;
+    if(userEamil2=='' || userEamil2==null){
+        alert("이메일을 입력하세요") 
+        ConradJoin.Email2.focus(); 
+         $(function(){
+            $('#Email3').change(function(){
+                if($('#Email3').val() == "1"){
+                    $("#Email3").val(""); //값 초기화
+                    $("#Email2").prop("readonly",false); //활성화
+                } else if($('#Email3').val() == ""){
+                    $("#Email2").val(""); //값 초기화
+                    $("#Email2").prop("readonly",true); //textBox 비활성화
+                } else {
+                    $("#Email2").val($('#Email3').val()); //선택값 입력
+                    $("#Email2").prop("readonly",true); //비활성화
+                }
+            });
+        });
+        return false;
+    }*/
+
+    /*$(function(){
+    $('select[name=userEmail1]').change(function(){
+    if($('select[name=userEmail1]').val() == "1"){
+    $("#Email").val(""); //값 초기화
+    $("#Email").prop("readonly",false); //활성화
+    } else if($('select[name=userEmail1]').val() == ""){
+    $("#Email").val(""); //값 초기화
+    $("#Email").prop("readonly",true); //textBox 비활성화
+    } else {
+    $("#Email").val($('select[name=userEmail1]').val()); //선택값 입력
+    $("#Email").prop("readonly",true); //비활성화
+    }
+    });
+    });
+
+    $(function(){
+    $('input[name=userPhone1]').keyup(function() {   
+    $(this).val($(this).val().replace(/[^0-9]/g,""));
+    }); //#phone.keyup 
+    });
+    $(function(){
+    $('input[name=userPhone1]').keyup(function() {
+    if (event.which && (event.which > 36 && event.which < 58 || event.which > 95 && event.which <106 || event.which == 8 || event.which == 9)){
+    //alert("숫자다");
+    }else{ 
+    alert("숫자만 입력해주세요");
+    $('input[name=userPhone1]').val("");
+    $('input[name=userPhone1]').focus();
+    }
+    }); //#phone.keyup 
+    });
+    */
+
+    document.ConradJoin.submit();
+}
+    </script>
 </head>
 
 <body>
@@ -84,7 +206,7 @@
                         <tr>
                             <td><label for="userPWok">비밀번호 확인</label></td>
                             <td><input type="password" name="userPWok" minlength="5" maxlength="20" size="15"></td>
-                            <td colspan="2"><font name="PWcheck" size="2"></font></td>
+                            <td colspan="2"><span id="PWcheck" size="2"></span></td>
                         </tr>
                         <tr>
                             <td colspan="4">
@@ -204,9 +326,9 @@
                         <tr>
                             <td><label for="userEmail">이메일</label></td>
                             <td colspan="3">
-                                <input type="text" name="userEmail" size="15">@
-                                <input id="Email" type="text" name="userEmail" size="15">
-                                <select name="userEmail1"> 
+                                <input id="Email1" type="text" name="userEmail" size="15">@
+                                <input id="Email2" type="text" name="userEmail" size="15">
+                                <select id="Email3" name="userEmail"> 
                                     <option value="선택하기" selected>선택하기</option>
                                     <option value="naver">naver.com</option>
                                     <option value="daum">daum.net</option>
@@ -240,7 +362,7 @@
                     </table>
                  </div>
                 <div class="secButton">
-                    <a href="JoinOkPage.html"><input type="button" value="가입신청" id="btn" onclick="JoinChk"></a>
+                    <a href="JoinOkPage.html"><input type="button" value="가입신청" id="btn" onclick="JoinChk()"></a>
                 </div>
                
             </form>
