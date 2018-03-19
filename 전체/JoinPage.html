@@ -6,130 +6,9 @@
     <title>JoinPage</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/Join.css">
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!--<script type="javascript" src="js/Join.js"></script>-->
-    <script>       
-        
-        
-    function JoinChk() {  // 데이터 입력유무 확인 스크립트
-    
-    // 아이디 검사
-    var userId=ConradJoin.userID.value;
-    if(userId.length<5 || userId.length>=13) {
-        alert("아이디는 5글자 이상, 12글자 이하만 가능합니다.");
-        ConradJoin.userID.focus();
-        return false;
-    }
-    
-    // 비밀번호 검사
-    var userPw=ConradJoin.userPW.value;
-        if(userPw.length<8 || userPw.length>=21) {
-        alert("비밀번호는 8글자 이상, 20글자 이하만 가능합니다.");
-        ConradJoin.userPW.focus();
-        return false;
-    }
-
-    // 비밀번호 확인 검사
-    var userPwOk=ConradJoin.userPWok.value;
-        if(userPwOk.length<8 || userPwOk.length>=21) {
-        alert("비밀번호는 8글자 이상, 20글자 이하만 가능합니다.");
-        ConradJoin.userPWok.focus();
-        return false;
-    }
-    
-    var obj = document.getElementsByName("userPW");
-    var obj2 = document.getElementsByName("userPWok");
-
-    if (obj[0].value != obj2[0].value) {
-        document.getElementById('PWcheck').innerText="비밀번호가 일치하지 않습니다.";
-        document.getElementById('PWcheck').style.color="#f00";
-        ConradJoin.userPW.focus();
-        return false;
-    }
-        
-        
-    /*// 비밀번호 일치 여부
-    if(document.getElementsByName('userPW').value != document.getElementsByName('userPWok').value) {
-        document.getElementsById('PWcheck').innerHTML="비밀번호가 일치하지 않습니다.";
-        document.getElementsById('PWcheck').style.color="#f00";
-        document.ConradJoin.userPW.focus();
-        return false;
-    }*/
-
-    //이름 검사
-    var userName=ConradJoin.userNAME.value;
-    if(userName=='' || userName==null) {
-        alert("성함을 입력하세요") 
-        ConradJoin.userNAME.focus(); 
-        return false;
-    }
-    
-    // 이메일 검사
-    var userEamil1=ConradJoin.Email1.value;
-    if(userEamil1=='' || userEamil1==null) {
-        alert("이메일을 입력하세요") 
-        ConradJoin.Email1.focus(); 
-        return false;
-    }
-        
-    /*// 이메일 검사
-    var userEamil2=ConradJoin.Email2.value;
-    if(userEamil2=='' || userEamil2==null){
-        alert("이메일을 입력하세요") 
-        ConradJoin.Email2.focus(); 
-         $(function(){
-            $('#Email3').change(function(){
-                if($('#Email3').val() == "1"){
-                    $("#Email3").val(""); //값 초기화
-                    $("#Email2").prop("readonly",false); //활성화
-                } else if($('#Email3').val() == ""){
-                    $("#Email2").val(""); //값 초기화
-                    $("#Email2").prop("readonly",true); //textBox 비활성화
-                } else {
-                    $("#Email2").val($('#Email3').val()); //선택값 입력
-                    $("#Email2").prop("readonly",true); //비활성화
-                }
-            });
-        });
-        return false;
-    }*/
-
-    /*$(function(){
-    $('select[name=userEmail1]').change(function(){
-    if($('select[name=userEmail1]').val() == "1"){
-    $("#Email").val(""); //값 초기화
-    $("#Email").prop("readonly",false); //활성화
-    } else if($('select[name=userEmail1]').val() == ""){
-    $("#Email").val(""); //값 초기화
-    $("#Email").prop("readonly",true); //textBox 비활성화
-    } else {
-    $("#Email").val($('select[name=userEmail1]').val()); //선택값 입력
-    $("#Email").prop("readonly",true); //비활성화
-    }
-    });
-    });
-
-    $(function(){
-    $('input[name=userPhone1]').keyup(function() {   
-    $(this).val($(this).val().replace(/[^0-9]/g,""));
-    }); //#phone.keyup 
-    });
-    $(function(){
-    $('input[name=userPhone1]').keyup(function() {
-    if (event.which && (event.which > 36 && event.which < 58 || event.which > 95 && event.which <106 || event.which == 8 || event.which == 9)){
-    //alert("숫자다");
-    }else{ 
-    alert("숫자만 입력해주세요");
-    $('input[name=userPhone1]').val("");
-    $('input[name=userPhone1]').focus();
-    }
-    }); //#phone.keyup 
-    });
-    */
-
-    document.ConradJoin.submit();
-}
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script src="js/Join.js"></script>
 </head>
 
 <body>
@@ -142,7 +21,9 @@
                         <li><a href="index.html">예약</a></li>
                     </ul>
                 </div>
-                 <a href="index_main.html"><div class="logo"></div></a>
+                <a href="index_main.html">
+                    <div class="logo"></div>
+                </a>
                 <div class="right">
                     <div class="upSide">
                         <ul>
@@ -165,85 +46,91 @@
             </div>
         </div>
         <div id="contents">
-        <nav>
-            <span class="txtLeft">회원가입</span>
-            <span class="txtRight">홈>회원가입</span>
-        </nav>
-        <section>
-            <form action="#" method="post" name="ConradJoin">
-                <div class="secTable">
-                     <table>
-                        <tr>
-                            <td>웹사이트ID/PW</td>
-                            <td colspan="3"></td>
-                        </tr>
-                        <tr class="tr_num1">
-                            <td colspan="4">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="num1"><label for="userNum">고객번호</label></td>
-                            <td class="num2">자동으로 생성됩니다.</td>
-                            <td colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userID">아이디</label></td>
-                            <td colspan="2">
-                                <input type="text" name="userID" minlength="5" maxlength="12" size="15">
-                                <input class="butId" type="button" value="아이디 중복확인">
-                            </td>
-                            <td><p>5~12자 이내 영문 또는 영문/숫자 조합</p></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userPW">비밀번호</label></td>
-                            <td colspan="2">
-                                <input type="password" name="userPW" minlength="5" maxlength="20" size="15">
-                                <span>비밀번호입력안내</span>
-                            </td>
-                            <td><p>8~20자 이내 영문/숫자 조합</p></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userPWok">비밀번호 확인</label></td>
-                            <td><input type="password" name="userPWok" minlength="5" maxlength="20" size="15"></td>
-                            <td colspan="2"><span id="PWcheck" size="2"></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"><p>기본정보</p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="userNAME">성명(한글)</label></td>
-                            <td><input type="text" name="userNAME" size="15"></td>
-                            <td colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userGender">성별</label></td>
-                            <td>
-                                <input type="radio" name="userGender" id="Man" checked>남자
-                                <input type="radio" name="userGender" id="Woman">여자
-                            </td>
-                            <td colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userYear">생년월일</label></td>
-                            <td colspan="3">
-                                <select name="userYear"> 
+            <nav>
+                <span class="txtLeft">회원가입</span>
+                <span class="txtRight">홈>회원가입</span>
+            </nav>
+            <section>
+                <form action="#" method="post" name="ConradJoin">
+                    <div class="secTable">
+                        <table>
+                            <tr>
+                                <td>웹사이트ID/PW</td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr class="tr_num1">
+                                <td colspan="4">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="num1"><label for="userNum">고객번호</label></td>
+                                <td class="num2">자동으로 생성됩니다.</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="userID">아이디</label></td>
+                                <td colspan="2">
+                                    <input type="text" name="userID" minlength="5" maxlength="12" size="15">
+                                    <input class="butId" type="button" value="아이디 중복확인">
+                                </td>
+                                <td>
+                                    <p>5~12자 이내 영문 또는 영문/숫자 조합</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="userPW">비밀번호</label></td>
+                                <td colspan="2">
+                                    <input type="password" name="userPW" minlength="5" maxlength="20" size="15">
+                                    <span>비밀번호입력안내</span>
+                                </td>
+                                <td>
+                                    <p>8~20자 이내 영문/숫자 조합</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="userPWok">비밀번호 확인</label></td>
+                                <td><input type="password" name="userPWok" minlength="5" maxlength="20" size="15"></td>
+                                <td colspan="2"><span id="PWcheck" size="2"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <p>기본정보</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="userNAME">성명(한글)</label></td>
+                                <td><input type="text" name="userNAME" size="15"></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="userGender">성별</label></td>
+                                <td>
+                                    <input type="radio" name="userGender" id="Man" checked>남자
+                                    <input type="radio" name="userGender" id="Woman">여자
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="userYear">생년월일</label></td>
+                                <td colspan="3">
+                                    <select name="userYear"> 
                                 <option value="2000">2000</option>
                                 <option value="1999">1999</option>
                                 <option value="1998">1998</option>
@@ -274,7 +161,7 @@
                                 <option value="1973">1973</option>
                                 <option value="1972">1972</option>
                             </select>년
-                            <select name="userBirth_month">
+                                    <select name="userBirth_month">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -288,7 +175,7 @@
                                 <option value="11">11</option>
                                 <option value="12">12</option>
                             </select>월
-                            <select name="userBirth_day">
+                                    <select name="userBirth_day">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -321,55 +208,55 @@
                                 <option value="30">30</option>
                                 <option value="31">31</option>
                             </select>일
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="userEmail">이메일</label></td>
-                            <td colspan="3">
-                                <input id="Email1" type="text" name="userEmail" size="15">@
-                                <input id="Email2" type="text" name="userEmail" size="15">
-                                <select id="Email3" name="userEmail"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="userEmail">이메일</label></td>
+                                <td colspan="3">
+                                    <input id="Email1" type="text" name="userEmail" size="15">@
+                                    <input id="Email2" type="text" name="userEmail" size="15">
+                                    <select id="Email3" name="userEmail"> 
                                     <option value="선택하기" selected>선택하기</option>
-                                    <option value="naver">naver.com</option>
-                                    <option value="daum">daum.net</option>
-                                    <option value="gmail">gmail.com</option>
-                                    <option value="hanmail">hanmail.net</option>
-                                    <option value="1">직접입력</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="daum.com">daum.net</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="hanmail.com">hanmail.net</option>
+                                    <option value="">직접입력</option>
                                 </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="userPhone1">휴대전화</label></td>
-                            <td colspan="3">
-                                <select name="userPhone1"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="userPhone">휴대전화</label></td>
+                                <td colspan="3">
+                                    <select name="userPhone"> 
                                     <option value="010" selected>010</option>
                                     <option value="011">011</option>
                                     <option value="016">016</option>
                                     <option value="019">019</option>
                                 </select> -
-                                <input type="text" name="userPhone2" maxlength="4" size="4"> -
-                                <input type="text" name="userPhone3" maxlength="4" size="4"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="userAddress1">주소</label></td>
-                            <td colspan="4">
-                                <input type="text" name="userAddress1" maxlength="5" size="5">
-                                <input type="button" value="주소찾기"><br>
-                                <input type="text" name="userAddress2" size="80">
-                                <input type="text" name="userAddress3" size="80">
-                            </td>
-                        </tr>
-                    </table>
-                 </div>
-                <div class="secButton">
-                    <input type="button" value="가입신청" id="btn" onclick="JoinChk()">
-                </div>
-               
-            </form>
-        </section>
+                                    <input type="text" id="Phone1" name="userPhone" maxlength="4" size="4"> -
+                                    <input type="text" id="Phone2" name="userPhone" maxlength="4" size="4"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="userAddress">주소</label></td>
+                                <td colspan="4">
+                                    <input type="text" id="POST_CODE" name="userAddress" maxlength="5" size="5">
+                                    <input type="button" value="주소찾기" onclick="Address()"><br>
+                                    <input type="text" id="ADDRESS2" name="userAddress" size="80">
+                                    <input type="text" name="userAddress" size="80">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="secButton">
+                        <input type="button" value="가입신청" id="btn" onclick="JoinChk()">
+                    </div>
+
+                </form>
+            </section>
         </div>
-         <footer>
-           <div class="footer_content">
+        <footer>
+            <div class="footer_content">
                 <ul>
                     <img src="img/hotel_font_center.png" alt="콘래드로고">
                     <li><a href="#">호텔소개</a></li>
