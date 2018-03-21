@@ -6,10 +6,63 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/motion.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
     <div id="loginWrap">
+        <!-- 아이디, 로그인 찾기 모달-->
+        <div class="modal">
+          <div class="findContent">
+              <div class="popupClose">X</div>
+              <div class="findIdPopUp">
+                <div class="title">
+                  <h3>아이디찾기</h3>
+                </div>
+                <form method="post"><!-- action="find_id_pw.php" -->
+                    <input type="text" class="name" name="find_name" placeholder="이름"/>
+                    <div class="findType">
+                        <div class="findEmail">
+                          <input type="radio" id="contactChoice1" name="choice" value="phone" checked="on"/>
+                          <label for="contactChoice1">휴대번호로 찾기</label>
+                        </div>
+                        <div class="findphoneNumber">
+                          <input type="radio" id="contactChoice2" name="choice" value="email"/>
+                          <label for="contactChoice2">이메일로 찾기</label>
+                        </div>
+                    </div>
+                  <div class="findContentPhone">
+                    <select class="selectMember" name="mobile">
+                      <option value="010">010</option>
+                      <option value="011">011</option>
+                      <option value="016">016</option>
+                      <option value="017">017</option>
+                      <option value="018">018</option>
+                      <option value="019">019</option>
+                    </select>
+                    <span class="phonLine"></span>
+                    <input type="text" class="phNumber" maxlength="4"/>
+                    <span class="phonLine"></span>
+                    <input type="text" class="phNumber" maxlength="4"/>
+                  </div>
+                  <div class="findContentEmail">
+                    <input type="text" class="emailAdress"/>
+                    <span class="emailLine">@</span>
+                    <input type="text" class="emailAdress">
+                    <span class="emailLine"></span>
+                    <select class="selectMember" name="mobile">
+                      <option value="직접입력">직접입력</option>
+                      <option value="naver.com">naver.com</option>
+                      <option value="daum.net">daum.net</option>
+                      <option value="gmail.com">gmail.com</option>
+                    </select>
+                  </div>
+                  <button class="findConfirm">확인</button>
+                </form>
+              </div>
+          </div>
+
+        </div>
+
         <div class="header">
             <div class="hMenu">
                 <div class="left">
@@ -56,35 +109,37 @@
                     </ul>
                 </div>
                 <div class="loginType member">
-                    <form class="loginForm" action="loginOk.php" method="post">
-                      <span class="info01"><input type="text" name="conrad_number_or_id" placeholder="콘래드 번호 또는 아이디를 입력해 주세요." onfocus="this.value=''" ></span>
-                      <span class="info02"><input type="password" name="conrad_number_or_password" placeholder="비밀번호를 입력해 주세요" onfocus="this.value=''"></span>
-                      <span class="info03">
-                            <span class="idCheck"><input type="checkbox" id="idSave" name="subscribe" value=""></span>
-                            <label for="idSave">아이디저장</label>
-                      </span>
-                      <span class="goLogin"><input class="goLogin" type="submit" value="로그인"></span>
+                    <form id="loginForm" class="loginForm" method="post"><!-- action="loginOk.php" -->
+                      <input type="text" class="loginInput" name="id" placeholder="콘래드 번호 또는 아이디를 입력해 주세요." />
+                      <p class="error display-none idErrMsg">아이디를 입력해주세요.</p>
+                      <input type="password" class="loginInput" name="pw" placeholder="비밀번호를 입력해 주세요" />
+                      <p class="error display-none pwErrMsg">비밀번호를 입력해주세요.</p>
+                      <div class="idCheckboxWrap">
+                            <input type="checkbox" class="idCheck" name="subscribe" value="" />
+                            <label>아이디저장</label>
+                      </div>
+                      <input class="goLogin loginBtn" type="submit" value="로그인" />
                     </form>
                     <div class="findAccount">
-                        <a href="#">아이디 찾기</a>
-                        <span class="bar">|</span>
-                        <a href="#">비밀번호 찾기</a>
+                      <a href="#" class="findId">아이디 찾기</a>
+                      <span class="bar">|</span>
+                      <a href="#" class="">비밀번호 찾기</a>
                     </div>
-                    <div class="joinBtn">
-                        <span>회원이 아니시라면?</span>
-                        <button>회원가입</button>
+                    <div class="joinWrap">
+                        <label class="joinLabel">회원이 아니시라면?</label>
+                        <button class="joinBtn">회원가입</button>
                     </div>
                 </div>
                 <div class="loginType nonMembers">
-                    <form class="loginForm" action="loginOk.php" method="post">
-                      <span class="info01"><input type="text" name="conrad_number" placeholder="예약번호를 입력해 주세요." onfocus="this.value=''" ></span>
-                      <span class="info02"><input type="text" name="conrad_number" placeholder="FIRST NAME(이름)" onfocus="this.value=''" ></span>
-                      <span class="info02"><input type="text" name="conrad_number" placeholder="RIAST NAME(성)" onfocus="this.value=''" ></span>
-                      <span class="goLogin"><input class="goLogin" type="submit" value="조회"></span>
+                    <form id="nonMemberLoginForm" class="loginForm" method="post"><!-- action="loginOk.php" -->
+                      <input type="text" class="loginInput" name="conrad_number" placeholder="예약번호를 입력해 주세요." />
+                      <input type="text" class="loginInput" name="conrad_number" placeholder="FIRST NAME(이름)" />
+                      <input type="text" class="loginInput" name="conrad_number" placeholder="RIAST NAME(성)" />
+                      <input class="goLogin loginInput" type="submit" value="조회" />
                     </form>
-                    <div class="joinBtn">
-                        <span>회원이 아니시라면?</span>
-                        <button>회원가입</button>
+                    <div class="joinWrap">
+                        <label class="joinLabel">회원이 아니시라면?</label>
+                        <button class="joinBtn">회원가입</button>
                     </div>
                 </div>
             </div>
@@ -108,18 +163,6 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        
-        var frm = document.getElementsByName('conrad_number_or_password');
-        
-        if(frm.value == "" || frm.value == null){
-            alert("값이 비었어!");
 
-            return false;
-        }
-    
-    </script>
-    
 </body>
 </html>
