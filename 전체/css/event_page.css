@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+/*section부분*/
+
+#sectionAll{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 90px;
+    left: 0;
+    
+}
+
+#sectionAll .eventBoard{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#sectionAll .eventBoard .eventTitle{
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+    
+    z-index: 3;
+}
+
+section{
+    width: 100%;
+    height: 884px;
+    
+    position: relative;
+
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+
+.sec_bg1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/img3.jpg) no-repeat 50%;
+    background-size:cover;
+}
+
+.sec_bg2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/img7.jpg) no-repeat 50%;
+    background-size:cover;
+}
+
+.sec_bg3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/img5.jpg) no-repeat 50%;
+    background-size:cover;
+}
+
+section img{
+    z-index: 3;
+    position: absolute;
+    bottom: -10px;
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background: #181510;
+/*
+    width: 100%;
+    height: 130px;
+    background: #000;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+*/
+
+}
+
+/*gnb 시작*/
+.gnb{
+    width: 140px;
+    height: 300px;
+    position: fixed;
+    left: 200px;
+    top: 300px;
+    z-index: 9;
+    background: #181510cc;
+    
+    
+}
+
+.gnb>ul>li{
+    
+    text-align: center;
+    height: 94px;
+    
+}
+
+.gnb>ul>li:hover{
+    background: #cbb682;
+    
+    
+}
+
+.gnb>ul>li>a{
+    display: block;
+    color: #cbb682;
+    font-size: 15px;
+    text-align: center;
+    /*line-height: 35px;*/
+    margin: 5px 0;
+    height: 95px;
+    line-height: 95px;
+    
+}
+
+.gnb>ul>li>a:hover{
+    color: #785f37;
+    font-weight: bold;
+}
+
+/*---- footer 시작 ----*/
+.footer .footer_content {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer img {
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.footer ul {
+    padding: 15px auto;
+}
+.footer ul>li {
+    width: 148.5px;
+    float: left;
+    color: #cbb682;
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0;
+}
+.footer ul>li>a {
+    color: #cbb682;
+    font-size: 13px;
+}
+.footer address {
+    width: 100%;
+    height: 50px;
+    color: #785f37;
+    font-size: 12px;
+    text-align: center;
+}
+

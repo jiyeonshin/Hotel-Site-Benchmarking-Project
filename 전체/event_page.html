@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/event_page.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <title>이벤트 페이지</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!--Header 시작-->
+        <div class="header">
+
+            <div class="hMenu">
+
+                <div class="left">
+                    <ul>
+                        <li><a href="#" class="menu_txt">호텔찾기</a></li>
+                        <li><a href="indext.html" class="menu_txt">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo" onclick="location.href='index_main.html'">
+                </div>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+
+                            <li><a href="JoinPage.html" class="menu_txt">회원가입</a></li>
+                            <li><a href="login.html" class="menu_txt">로그인</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#" class="menu_txt">이벤트</a></li>
+                            <li><a href="faq.html" class="menu_txt">고객문의</a></li>
+                            <li><a href="#" class="menu_txt">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line">
+
+            </div>
+        </div>
+
+        <!--Fixed gnb 시작-->
+        <div class="gnb">
+            <ul>
+                <li><a href="#sec1" class="m1">SPRING GOURMET</a></li>
+                <li><a href="#sec2" class="m2">URBAN ISLAND</a></li>
+                <!--  <li><a href="#sec3" class="m3">PLAY MORE WITH CONRAD</a></li>
+                <li><a href="#sec4" class="m4">SPECIAL 24 HOURS</a></li>-->
+                <li><a href="#sec3" class="m3">FAMILY DELIGHTS</a></li>
+            </ul>
+
+
+        </div>
+
+
+        <!--Section 시작-->
+
+        <div id="sectionAll">
+
+            <div class="eventBoard">
+                <img src="img/eventTitle.png" alt="" class="eventTitle">
+
+                <section id="sec1">
+                    <div class="sec_bg1"></div>
+                    <img src="img/event_page1_01.jpg" alt="">
+                </section>
+                <section id="sec2">
+                    <div class="sec_bg2"></div>
+                    <img src="img/event_page1_02.jpg" alt="">
+                </section>
+                <section id="sec3">
+                    <div class="sec_bg3"></div>
+                    <img src="img/event_page1_03.jpg" alt="">
+                </section>
+                <!--                <section id="sec4">SECTION4</section>
+                <section id="sec5">SECTION5</section>-->
+            </div>
+        </div>
+
+
+
+
+
+        <!--footer 시작-->
+        <div class="footer">
+           <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+                <address>
+                    서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+                </address>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        
+        var sec1 = $('#sec1').offset().top;
+        var sec2 = $('#sec2').offset().top;
+        
+        $(window).scroll(function() {
+            var scrolltop = $(this).scrollTop();
+
+            
+             $('.sec_bg1').css('background-position-y', -(scrolltop * 2) + 'px');
+            
+            if (scrolltop > 300) {
+                
+                scrolltop = scrolltop-sec1;
+                $('.sec_bg2').css('background-position-y', -(scrolltop *0.4) + 'px');
+            }
+            
+
+            if (scrolltop > 1000) {
+                scrolltop = scrolltop-sec2;
+                $('.sec_bg3').css('background-position-y', -(scrolltop * 0.4) + 'px');
+            }
+        });
+
+
+        $(document).ready(function() {
+            var scrolltop = $(this).scrollTop();
+
+
+            $(".m1, .m2, .m3").click(function(event) {
+
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top-110
+                }, 2000);
+
+            });
+
+
+        });
+    </script>
+</body>
+</html>

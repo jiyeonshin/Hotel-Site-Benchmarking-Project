@@ -8,7 +8,7 @@
     background: #181510;
     position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
     z-index: 5;
    transition: 2s ease-in-out;
 }
@@ -55,6 +55,7 @@
     width: 30%;
     height: 90px;
     float: left;
+    cursor: pointer;
     /*border: 1px solid;
     box-sizing: border-box;*/
     background: url('../img/hotel_font_center.png') no-repeat 50%;
