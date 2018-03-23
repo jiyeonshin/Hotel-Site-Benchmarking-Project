@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/event_page.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <title>이벤트 페이지</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!--Header 시작-->
+        <div class="header">
+
+            <div class="hMenu">
+
+                <div class="left">
+                    <ul>
+                        <li><a href="#" class="menu_txt">호텔찾기</a></li>
+                        <li><a href="#" class="menu_txt">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                </div>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+
+                            <li><a href="#" class="menu_txt">회원가입</a></li>
+                            <li><a href="#" class="menu_txt">로그인</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#" class="menu_txt">이벤트</a></li>
+                            <li><a href="#" class="menu_txt">고객문의</a></li>
+                            <li><a href="#" class="menu_txt">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line">
+
+            </div>
+        </div>
+
+        <!--Fixed gnb 시작-->
+        <div class="gnb">
+            <ul>
+                <li><a href="#sec1" class="m1">SPRING GOURMET</a></li>
+                <li><a href="#sec2" class="m2">URBAN ISLAND</a></li>
+                <!--  <li><a href="#sec3" class="m3">PLAY MORE WITH CONRAD</a></li>
+                <li><a href="#sec4" class="m4">SPECIAL 24 HOURS</a></li>-->
+                <li><a href="#sec3" class="m3">FAMILY DELIGHTS</a></li>
+            </ul>
+
+
+        </div>
+
+
+        <!--Section 시작-->
+        <!--       <div class="section">
+
+            <div class="eventBoard">
+                <ul>
+                    <li id="sec1">SECTION1</li>
+                    <li id="sec2">SECTION2</li>
+                    <li id="sec3">SECTION3</li>
+                    <li id="sec4">SECTION4</li>
+                    <li id="sec5">SECTION5</li>
+                </ul>
+            </div>
+        </div>-->
+
+        <div id="sectionAll">
+
+            <div class="eventBoard">
+                <img src="img/eventTitle.png" alt="" class="eventTitle">
+
+                <section id="sec1">
+                    <div class="sec_bg1"></div>
+                    <img src="img/event_page1_01.jpg" alt="">
+                </section>
+                <section id="sec2">
+                    <div class="sec_bg2"></div>
+                    <img src="img/event_page1_02.jpg" alt="">
+                </section>
+                <section id="sec3">
+                    <div class="sec_bg3"></div>
+                    <img src="img/event_page1_03.jpg" alt="">
+                </section>
+                <!--                <section id="sec4">SECTION4</section>
+                <section id="sec5">SECTION5</section>-->
+            </div>
+        </div>
+
+
+
+
+
+        <!--footer 시작-->
+        <div class="footer">footer</div>
+    </div>
+
+    <script>
+                $(document).ready(function() {
+                    var scrolltop = $(this).scrollTop();
+
+                    $('.m1, .m2 ,.m3').click(function(event) {
+                        event.preventDefault();
+
+
+                        $('html, body').animate({
+                            scrollTop: $(this.hash).offset().top - 90}, 1500);
+                    });
+                    
+
+                });
+
+
+        /*        $(window).scroll(function() {
+                    var scrolltop = $(this).scrollTop();
+                    
+                    console.log(scrolltop);
+                    $('.sec_bg1').css('top', -(scrolltop * 1.5) + 'px');
+                    console.log(scrolltop);
+                    if (scrolltop > 1200) {
+                        $('.sec_bg2').css('top', -(scrolltop * 0.4) + 'px');
+                    }
+
+                    $(document).ready(function() {
+                        $('.m1, .m2 ,.m3').click(function(event) {
+                            event.preventDefault();
+
+
+                            $('html, body').animate({
+                                scrollTop: $(this.hash).offset().top - 90}, 1500);
+
+                            
+                        });
+
+                    });
+
+                });*/
+
+/*        $(window).scroll(function() {
+            var scrolltop = $(this).scrollTop();
+            $('.sec_bg1').css('top', -(scrolltop * 2) + 'px');
+            if (scrolltop > 900) {
+                $('.sec_bg2').css('top', -(scrolltop * 0.4) + 'px');
+            }
+            if (scrolltop > 1600) {
+                $('.sec_bg3').css('top', -(scrolltop * 0.4) + 'px');
+            }*/
+        
+
+
+    </script>
+</body>
+</html>
