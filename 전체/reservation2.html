@@ -6,166 +6,179 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reservation2.css">
-     <script>
+    <script>
         $(document).ready(function(){
-            $("#box:first").click(function(){
-            $(".Option:first").toggle();
-     });
-});
-        </script>
+//            $("#box:first").click(function(){
+//                $(".Option:first").toggle();
+//            });
+
+             $('.Lcontents').click(function(){
+                var $option = $(this).closest('.FreservationWrap').find('.Option');
+                $option.toggle();
+                //$('기준요소').closest('조건') : 선택된 요소의 최초의 부모 요소 반환?
+                //$('기준요소').parents('조건') : 잡히는 모든 상위 요소를 반환
+                //$('기준요소').find('조건')    : 부모 태그의 모든 하위 요소의 자식을 선택
+                //$('기준요소').children('조건') : 부모 요소의 바로 아래 단계인 자식요소만 선택
+                //$('기준요소').siblings('조건') : 기준요소의 형제중에 조건에 맞는 객체반환
+             });
+         });
+    </script>
 </head>
 <body>
     <div id="wrap">
         <div class="header">
-             <div class="hMenu">
-                    <div class="left">
+            <div class="hMenu">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="index.html">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo" onclick="location.href='#'">
+                </div>
+                <div class="right">
+                    <div class="upSide">
                         <ul>
-                            <li><a href="#">호텔찾기</a></li>
-                            <li><a href="index.html">예약</a></li>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="JoinPage.html">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
                         </ul>
                     </div>
-                    <div class="logo" onclick="location.href='index_main.html'"> </div>
-                    <div class="right">
-                        <div class="upSide">
-                            <ul>    
-                                
-                                <li><a href="JoinPage.html">회원가입</a></li>
-                                <li><a href="login.html">로그인</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="downSide">
-                            <ul>
-                                <li><a href="#">이벤트</a></li>
-                                <li><a href="#">고객문의</a></li>
-                                <li><a href="#">호텔소개</a></li>
-                            </ul>
-                        </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">고객문의</a></li>
+                            <li><a href="#">호텔소개</a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="line">
-
-                </div>
             </div>
-            
-         <div class="section">
+            <div class="line">
+            </div>
+        </div>
+
+        <div class="section">
             <div class="tab">
                 <ul>
-                    <li class="Ftab">
-                        <p class="font">전체 객실(4)</p>
-                    </li>
+                    <li class="Ftab"><p class="font">전체 객실(4)</p></li>
                     <li class="Ttab"></li>
-                 </ul>
+                </ul>
             </div>
             <div class="topbar">
                 <p class="p1">객실</p>
                 <p class="p2">현재 예약 가능한 객실입니다.</p>
             </div>
-            <div class="Freservation">
-                <ul>
-                    <li class="Fcontents"></li>
-                    <li class="Scontents">
-                        <div class="t1">
-                            <p class="c1">[Standard]</p>
-                            <p class="c2">Deluxe</p>
-                        </div>
-                        <div class="t2">
-                            <p class="c3">객실크기</p>
-                            <p class="c4">36m<sup>2</sup></p>
-                        </div>
-                        <div class="t3">
-                            <p class="c5">침대타입</p>
-                            <p class="c6">더블(킹 사이즈), 트윈</p>
-                        </div>
-                    </li>
-                    <li class="Tcontents">
-                        <p class="t1">230,000~</p>
-                        <p class="t2">원/1박</p>
-                        <p class="t3">
-                            객실 이미지 보기
-                        </p>
-                      </li>
-                    <li class="Lcontents">
-                        <div id="box">
-                            <p class="open">
-                                예약하기
+            <div class="FreservationWrap">
+                <div class="Freservation">
+                    <ul>
+                        <li class="Fcontents"></li>
+                        <li class="Scontents">
+                            <div class="t1">
+                                <p class="c1">[Standard]</p>
+                                <p class="c2">Deluxe</p>
+                            </div>
+                            <div class="t2">
+                                <p class="c3">객실크기</p>
+                                <p class="c4">36m<sup>2</sup></p>
+                            </div>
+                            <div class="t3">
+                                <p class="c5">침대타입</p>
+                                <p class="c6">더블(킹 사이즈), 트윈</p>
+                            </div>
+                        </li>
+                        <li class="Tcontents">
+                            <p class="t1">230,000~</p>
+                            <p class="t2">원/1박</p>
+                            <p class="t3">
+                                객실 이미지 보기
                             </p>
-                        </div>
-                    </li>
-                </ul>
+                          </li>
+                        <li class="Lcontents">
+                            <div id="box">
+                                <p class="open">
+                                    예약하기
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Option">
+                    <ul>
+                        <li class="c1">
+                            <input type="radio" name="room" id="" value="Double">
+                            <label for="radio">Double</label>
+                        </li>
+                       <li class="c2">
+                           <a href="step2opt.html"><img src="img/btn.png" width="100" height="44" alt="btnimg"></a>
+                        </li>
+                       <li class="c3">
+                            <input type="radio" name="room" id="" value="Twin">
+                            <label for="radio">Twin</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          <div class="Option">
-                <ul>
-                    <li class="c1">
-                        <input type="radio" name="room" id="" value="Double">
-                        <label for="radio">Double</label>
-                    </li>
-                   <li class="c2">
-                       <a href="step2opt.html"><img src="img/btn.png" width="100" height="44" alt="btnimg"></a>
-                    </li>
-                   <li class="c3">
-                        <input type="radio" name="room" id="" value="Twin">
-                        <label for="radio">Twin</label>
-                    </li>
-                </ul>
-           </div>
-           
-              <hr class="underline"> 
-             <div class="Freservation">
-                 <span class="line"></span>
-                <ul>
-                    <li class="Fcontents_1"></li>
-                    <li class="Scontents_1">
-                        <div class="t1">
-                            <p class="c1">[Standard]</p>
-                            <p class="c2">Business Deluxe</p>
-                        </div>
-                        <div class="t2">
-                            <p class="c3">객실크기</p>
-                            <p class="c4">43m<sup>2</sup></p>
-                        </div>
-                        <div class="t3">
-                            <p class="c5">침대타입</p>
-                            <p class="c6">더블(킹 사이즈), 트윈</p>
-                        </div>
-                    </li>
-                    <li class="Tcontents">
-                        <p class="t1">280,000~</p>
-                        <p class="t2">원/1박</p>
-                        <p class="t3">
-                            객실 이미지 보기
-                        </p>
-                      </li>
-                    <li class="Lcontents">
-                        <div id="box">
-                            <p class="open">
-                                예약하기
+
+
+            <hr class="underline">
+            <div class="FreservationWrap">
+                <div class="Freservation">
+                     <span class="line"></span>
+                    <ul>
+                        <li class="Fcontents_1"></li>
+                        <li class="Scontents_1">
+                            <div class="t1">
+                                <p class="c1">[Standard]</p>
+                                <p class="c2">Business Deluxe</p>
+                            </div>
+                            <div class="t2">
+                                <p class="c3">객실크기</p>
+                                <p class="c4">43m<sup>2</sup></p>
+                            </div>
+                            <div class="t3">
+                                <p class="c5">침대타입</p>
+                                <p class="c6">더블(킹 사이즈), 트윈</p>
+                            </div>
+                        </li>
+                        <li class="Tcontents">
+                            <p class="t1">280,000~</p>
+                            <p class="t2">원/1박</p>
+                            <p class="t3">
+                                객실 이미지 보기
                             </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="Option">
-                <ul>
-                    <li class="c1">
-                        <input type="radio" name="room" id="" value="Double">
-                        <label for="radio">Double</label>
-                    </li>
-                    <li class="c2">
-                        <a href="step2opt.html"><img src="img/btn.png" width="100" height="44" alt="btnimg"></a>
-                    </li>
-                    <li class="c3">
-                        <input type="radio" name="room" id="" value="Twin">
-                        <label for="radio">Twin</label>
-                    </li>
-                </ul>
-           </div>
-            
-            
-            
-            <hr class="underline_1"> 
-             <div class="Freservation">
+                          </li>
+                        <li class="Lcontents">
+                            <div id="box">
+                                <p class="open">
+                                    예약하기
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Option">
+                    <ul>
+                        <li class="c1">
+                            <input type="radio" name="room" id="" value="Double">
+                            <label for="radio">Double</label>
+                        </li>
+                        <li class="c2">
+                            <a href="step2opt.html"><img src="img/btn.png" width="100" height="44" alt="btnimg"></a>
+                        </li>
+                        <li class="c3">
+                            <input type="radio" name="room" id="" value="Twin">
+                            <label for="radio">Twin</label>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+
+
+
+
+            <hr class="underline_1">
+            <div class="FreservationWrap">
+                           <div class="Freservation">
                  <span class="line"></span>
                 <ul>
                     <li class="Fcontents_2"></li>
@@ -214,10 +227,13 @@
                     </li>
                 </ul>
            </div>
-            
-            
-            <hr class="underline_1"> 
-             <div class="Freservation">
+            </div>
+
+
+
+            <hr class="underline_1">
+            <div class="FreservationWrap">
+                             <div class="Freservation">
                  <span class="line"></span>
                 <ul>
                     <li class="Fcontents_3"></li>
@@ -266,9 +282,11 @@
                     </li>
                 </ul>
            </div>
-            
-          </div>
-         
+            </div>
+
+
+        </div>
+
         <div class="footer">
               <div class="footer_content">
                 <ul>

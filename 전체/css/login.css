@@ -2,7 +2,16 @@
 
 #loginWrap {
     width: 100%;
-    height: 100%;
+    height: auto;
+    position: relative;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background: #0005;
+  position: absolute;
+  z-index: 100;
+  display: none;
 }
 .header {
     width: 100%;
@@ -11,13 +20,9 @@
     background: #181510;
 }
 .contents {
-    width: 1000px;
+    width: 800px;
     height: auto;
     margin: 100px auto;
-/*
-    border: solid 1px #ccc;
-    box-sizing: border-box;
-*/
 }
 .footer {
     width: 100%;
@@ -25,16 +30,117 @@
     background: #181510;
 }
 
+/*input 아이디,비밀번호 빈값시 설정*/
+.display-none {
+  display: none;
+}
+.error {
+  color: red;
+}
+
+/*modal 시작*/
+.modal .findContent {
+  width: 600px;
+  height: auto;
+  margin: 150px auto;
+  background: #fff;
+  position: relative;
+}
+.modal .findContent .popupClose {
+  width: 40px;
+  font-size: 40px;
+  line-height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.modal .findContent .findIdPopUp {
+  width: 500px;
+  height: auto;
+  margin:0 auto;
+  padding: 50px 50px 80px;
+}
+.modal .findContent .findIdPopUp .title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px 0 20px;
+}
+.modal .findContent .findIdPopUp form .name {
+  width: 100%;
+  height: 40px;
+  text-indent: 10px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+.modal .findContent .findIdPopUp .findType .findEmail{
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.modal .findContent .findIdPopUp .findType .findphoneNumber{
+    display: inline-block;
+    margin-left: 70px;
+}
+.modal .findContent .findIdPopUp .findContentPhone {
+  margin-top: 20px;
+}
+.modal .findContent .findIdPopUp .findContentPhone .selectMember {
+  width: 30%;
+  height: 40px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+.modal .findContent .findIdPopUp .findContentPhone .phonLine {
+  display: inline-block;
+  background: #000;
+  width: 0.8em;
+  height: 1px;
+  margin-bottom: 5px;
+}
+.modal .findContent .findIdPopUp .findContentPhone .phNumber{
+  width: 30%;
+  height: 40px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+.modal .findContent .findIdPopUp .findContentEmail {
+  margin-top: 20px;
+  display: none;
+}
+.modal .findContent .findIdPopUp .findContentEmail .selectMember {
+  width: 30%;
+  height: 40px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  margin-left: 17px;
+}
+
+.modal .findContent .findIdPopUp .findContentEmail .emailAdress{
+  width: 30%;
+  height: 40px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+
+.modal .findContent .findIdPopUp .findConfirm {
+  width: 100%;
+  height: 50px;
+  background: #222;
+  border: solid 0px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+
 /*header 시작*/
 .header .line {
     width: 100%;
     height: 9px;
     background: url(../img/gold_line.png) no-repeat 50%;
-/*
-    position: absolute;
-    bottom: 0;
-    left: 0;    
-*/
 }
 
 .header .hMenu {
@@ -121,7 +227,7 @@
 
 /*contents - loginContent 시작*/
 .loginContent {
-    width: 800px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     position: relative;
@@ -163,35 +269,42 @@
 .loginContent .loginType.nonMembers {
     display: none;
 }
-.loginContent .loginType .loginForm span {
-  display: block;
-  width: 100%;
-  height: auto;
-  line-height: 50px;
-  margin: 15px 0;
-}
-.loginContent .loginType span input {
+
+.loginInput, .loginBtn{
   width: 100%;
   height: 50px;
   font-size: 16px;
   border: solid 1px #ccc;
   box-sizing: border-box;
+  text-indent: 10px;
+  margin: 5px 0;
 }
-.loginContent .loginType span input.goLogin {
+.idCheckboxWrap {
+  display: block;
+  margin: 20px 0;
+  position: relative;
+}
+.idCheckboxWrap .idCheck {
+  width: 20px;
+  height: 20px;
+}
+.idCheckboxWrap label {
+  position: absolute;
+  top: 0px;
+  text-indent: 10px;
+}
+
+.loginContent .loginType .loginForm input.goLogin {
+  width: 100%;
+  height: 50px;
   font-size: 18px;
   background: #9F876B;
   color: #EBE0C0;
-}
-.loginContent .loginType span input.goLogin:hover {
+  border: solid 0px;
+  margin: 30px 0 15px;
   cursor: pointer;
 }
-.loginContent .loginType span.info03 span.idCheck {
-    display: inline;
-}
-.loginContent .loginType span.info03 span.idCheck input {
-    width: 20px;
-    height: 20px;
-}
+
 .loginContent .loginType .findAccount {
   width: 100%;
   height: 30px;
@@ -201,7 +314,7 @@
   padding: 20px 0 30px 0;
   border-bottom: solid 1px #ccc;
 }
-.loginContent .findAccount a {
+.loginContent .findAccount {
   color: #555;
 }
 .loginContent .findAccount a:hover {
@@ -210,15 +323,15 @@
 .loginContent .findAccount span.bar {
   margin: 0 30px;
 }
-.loginContent .joinBtn {
+.loginContent .joinWrap {
   width: 100%;
   height: auto;
 }
-.loginContent .joinBtn span{
+.loginContent .joinWrap .joinLabel{
   display: block;
   margin: 30px 0 20px;
 }
-.loginContent .joinBtn button {
+.loginContent .joinWrap .joinBtn {
   width: 100%;
   height: 50px;
   border: solid 1px #ccc;
@@ -229,7 +342,7 @@
   color: #555;
   margin: 10px 0;
 }
-.loginContent .joinBtn button:hover {
+.loginContent .joinWrap button:hover {
   cursor: pointer;
   background: #F6F6F6;
   border: solid 1px #9F876B;

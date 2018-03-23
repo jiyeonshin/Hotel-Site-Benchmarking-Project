@@ -6,6 +6,97 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/step2opt.css">
+    <script type="text/javascript">
+        $(function() {
+            $("#rsvoption").hide();
+            
+            $('#optpri_buf').append("원");
+            $('#optpri_bed').append("원");
+            $('#total').append("원");
+                        
+            // 옵션 가격과 예약 가격 일치or불일치
+            var buffet1 = $('#optpri_buf').text();
+            var buffet2 = $('#rsvoptpri_buf').text();
+            if(buffet1 !== buffet2) {
+                $('#rsvoptpri_buf').text(buffet1);
+            }else {
+                alert("가격 불일치");
+            }
+            
+            var buffet3 = $('#optpri_bed').text();
+            var buffet4 = $('#rsvoptpri_bed').text();
+            if(buffet3 !== buffet4) {
+                $('#rsvoptpri_bed').text(buffet3);
+            }else {
+                alert("가격 불일치");
+            }
+        })
+        
+        function onClick1(check){
+           var ischecked = check.checked;
+            
+            var bufVal = parseInt($('#optpri_buf').text());
+            var total = parseInt($('#total').text());
+
+            var sum
+            
+           if(check.checked){
+               $("#rsvoption").show();
+               $(".buffet").show();
+               
+               sum = total+bufVal;
+               $('#total').text(sum);
+               $('#total').append(" 원");
+               
+               if($('#package2').is(":checked")){
+                   $(".bed").show();
+               }else {
+                    $(".bed").hide();
+               }
+           }else{
+             if($('#package2').is(":checked")){
+                 $(".buffet").hide();
+             }else {
+                 $("#rsvoption").hide();
+             }
+               sum = total-bufVal;
+               $('#total').text(sum);
+               $('#total').append(" 원");
+           }
+        }
+        
+        function onClick2(check){
+           var ischecked = check.checked;
+            
+            var bedVal = parseInt($('#optpri_bed').text());
+            var total = parseInt($('#total').text());
+            var sum
+            
+           if(check.checked){
+               $("#rsvoption").show();
+               $(".bed").show();
+               
+               sum = total+bedVal;
+               $('#total').text(sum);
+               $('#total').append(" 원");
+               
+               if($('#package1').is(":checked")){
+                   $(".buffet").show();
+               }else {
+                    $(".buffet").hide();
+               }
+           }else{
+               if($('#package1').is(":checked")){
+                    $(".bed").hide();
+               }else {
+                   $("#rsvoption").hide();
+               }
+               sum = total-bedVal;
+               $('#total').text(sum);
+               $('#total').append(" 원");
+           }
+        }
+    </script>
 </head>
 <body>
     <div id="wrap">
@@ -22,6 +113,7 @@
                 <div class="right">
                     <div class="upSide">
                         <ul>
+                            <li><a href="login.html">예약확인</a></li>
                             <li><a href="JoinPage.html">회원가입</a></li>
                             <li><a href="login.html">로그인</a></li>
                         </ul>
@@ -29,7 +121,7 @@
                     <div class="downSide">
                         <ul>
                             <li><a href="#">이벤트</a></li>
-                            <li><a href="#">고객문의</a></li>
+                            <li><a href="faq.html">고객문의</a></li>
                             <li><a href="#">호텔소개</a></li>
                         </ul>
                     </div>
@@ -75,14 +167,14 @@
                     <div class="option">
                         <ul>
                             <li>
-                                <input type="checkbox" id="package1" name="addoptions[]" id="" value="조식">
+                                <input type="checkbox" id="package1" name="addoptions" value="조식" onclick="onClick1(this);">
                                 <label for="package1">Daily Breakfast Buffet for Adult</label> 
-                                <span>30,000 원</span>
+                                <span id="optpri_buf">50000 </span>
                             </li>
                             <li>
-                                <input type="checkbox" id="package2" name="addoptions[]" id="" value="침대">
+                                <input type="checkbox" id="package2" name="addoptions" value="침대" onclick="onClick2(this);">
                                 <label for="package2">Daily Extra bed</label> 
-                                <span>30,000 원</span>
+                                <span id="optpri_bed">30000 </span>
                             </li>
                         </ul>
                     </div>
@@ -172,11 +264,11 @@
                         <img src="./img/room.png" alt="객실 사진" width="240px">
                     </div>
                 </div>
-                <div class="rsvoption">
+                <div id="rsvoption">
                     <div class="rsvoptMain">옵션</div>
                     <ul>
-                        <li>Daily Breakfast Buffet for Adult<span>30,000 원</span></li>
-                        <li>Daily Extra bed<span>30,000 원</span></li>
+                        <li class="buffet">Daily Breakfast Buffet for Adult<span id="rsvoptpri_buf"></span></li>
+                        <li class="bed">Daily Extra bed<span id="rsvoptpri_bed"></span></li>
                     </ul>
                 </div>
                 <div class="rsvprice">
@@ -186,8 +278,14 @@
                     </ul>
                     <div class="allprice">
                         <ul>
-                            <li>요금합계<span>375,100 원</span></li>
+                            <li>요금합계<span id="total">375100 </span></li>
                         </ul>
+<!--
+                        <div class="priceSum">요금합계</div>
+                        <div id="total">375100</div>
+                        <div class="won">원</div>
+-->
+                        
                     </div>
                 </div>
             </div>
@@ -211,9 +309,5 @@
             </div>
         </div>
     </div>
-    
-    <!---- script ----->
-
-    
 </body>
 </html>
