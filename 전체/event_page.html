@@ -20,7 +20,7 @@
 
                 <div class="left">
                     <ul>
-                        <li><a href="#" class="menu_txt">호텔찾기</a></li>
+                        <li><a href="#" class="menu_txt findHotel">호텔찾기</a></li>
                         <li><a href="indext.html" class="menu_txt">예약</a></li>
                     </ul>
                 </div>
@@ -48,7 +48,30 @@
             <div class="line">
 
             </div>
+            
+                    <div class="hotelMenu">
+            
+                <ul>
+                    <li><label for="theConrad">THE CONRAD</label></li>
+                    <li><a href="#">서울콘래드호텔</a></li>
+                    <li><a href="#">제주콘래드호텔</a></li>
+                    <li><label for="theConrad">서울 강남</label></li>
+                    <li><a href="#">콘래드 역삼</a></li>
+                    <li><a href="#">콘래드 서초</a></li>
+                    <li><a href="#">콘래드 구로</a></li>
+                    <li><label for="theConrad">서울 강북</label></li>
+                    <li><a href="#">콘래드 광화문</a></li>
+                    <li><a href="#">콘래드 마포</a></li>
+                    <li><a href="#">콘래드 서대문</a></li>
+                </ul>
+            </div>
         </div>
+            <script>
+        $('.findHotel').on('click', function() {
+            
+            $('.hotelMenu').slideToggle();
+        });
+    </script>
 
         <!--Fixed gnb 시작-->
         <div class="gnb">

@@ -1,5 +1,52 @@
-@charset "utf-8";
+.hotelMenu{
+    width: 150px;
+    height: 350px;
+    background: #181510cc;
+    
+    position: absolute;
+    top: 90px;
+    left: 350px;
+    display: none;
+}
 
+.hotelMenu ul li{
+    width: 150px;
+    height: 30px;
+    border-bottom: 1px solid #cbb68224;
+    box-sizing: border-box;
+    
+}
+
+
+.hotelMenu ul li a{
+    color: #cbb682;
+    
+    display: block;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px #cbb682;
+}
+
+.hotelMenu ul li a:hover{
+    color: #785f37;
+    background: #cbb682;
+    font-weight: bold;
+}
+
+.hotelMenu ul li label{
+    color: #785f37;
+    font-weight: bold;
+    margin-top: 5px;
+    background: #cbb682;
+    display: block;
+    width: 150px;
+        
+    
+}
+
+
+/*header시작*/
 
 .header {
     width: 100%;
@@ -10,11 +57,6 @@
     left: 0;
     top: 0;
     z-index: 5;
-   transition: 2s ease-in-out;
-}
-
-.header.animate{
-    -webkit-transform: translate(0, -985%);
 }
 
 .header .line {
@@ -24,12 +66,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    
 }
 
 .header .hMenu {
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     height: 90px;
     background: #181510;
     margin: 0 auto;
@@ -39,34 +79,64 @@
     width: 35%;
     height: 90px;
     float: left;
+}
+
+.header .hMenu .left ul li {
+
+    width: 80px;
+    height: 30px;
+
+    float: left;
+    position: relative;
+    top: 50px;
+    right: 0;
+    text-align: center;
+    margin: 0px 10px;
+
+}
+
+.header .hMenu .left ul li:hover:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #785f37;
 
 
 }
 
-.header .hMenu .left ul li a{
+.header .hMenu .left ul li a.menu_txt {
     float: left;
     color: #cbb682;
-    margin-right: 10%;
-    margin-top: 55px;
-    
+    z-index: 10;
+    /*    margin-right: 10%;
+    margin-top: 45px;*/
+    display: block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
 }
 
 .header .hMenu .logo {
     width: 30%;
     height: 90px;
     float: left;
-    cursor: pointer;
     /*border: 1px solid;
     box-sizing: border-box;*/
     background: url('../img/hotel_font_center.png') no-repeat 50%;
     background-size: 300px 150px;
-
 }
 
 .header .hMenu .right {
     width: 35%;
     height: 90px;
     float: left;
+    position: relative;
+    bottom: 0;
+    right: 0;
 }
 
 .header .hMenu .right .upSide {
@@ -78,22 +148,61 @@
 .header .hMenu .right .downSide {
     width: 100%;
     height: 45px;
+
     /*background: #555;*/
 }
 
-.header .hMenu .right .upSide ul li a{
+
+.header .hMenu .right .upSide ul li {
+    width: 80px;
+    height: 30px;
+
+    float: right;
+    margin: 0px 5px;
+}
+
+.header .hMenu .right .upSide ul li a {
     float: right;
     color: #cbb682;
     font-size: 13px;
     margin-right: 10%;
     margin-top: 5px;
-    
+
 }
 
-.header .hMenu .right .downSide ul li a{
+.header .hMenu .right .downSide ul li {
+    width: 80px;
+    height: 30px;
+
+    float: right;
+    position: relative;
+    bottom: -5px;
+    right: 0;
+    text-align: center;
+    margin: 0px 10px;
+
+}
+
+.header .hMenu .right .downSide ul li a {
     float: right;
     color: #cbb682;
-    margin-right: 10%;
-    margin-top: 10px;
+    display: block;
+    width: 80px;
+    height: 30px;
+
+    text-align: center;
+}
+
+
+.header .hMenu .right .downSide ul li:hover:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #785f37;
+    z-index: 10;
 
 }
