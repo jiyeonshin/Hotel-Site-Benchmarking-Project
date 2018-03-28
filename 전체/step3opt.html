@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/step3opt.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -13,8 +15,8 @@
             <div class="hMenu">
                 <div class="left">
                     <ul>
-                        <li><a href="#">호텔찾기</a></li>
-                        <li><a href="indext.html">예약</a></li>
+                        <li><a href="#" class="menu_txt findHotel">호텔찾기</a></li>
+                        <li><a href="indext.html" class="menu_txt">예약</a></li>
                     </ul>
                 </div>
                 <div class="logo" onclick="location.href='index_main.html'">
@@ -22,20 +24,37 @@
                 <div class="right">
                     <div class="upSide">
                         <ul>
-                            <li><a href="JoinPage.html">회원가입</a></li>
-                            <li><a href="login.html">로그인</a></li>
+                            <li><a href="JoinPage.html" class="menu_txt">회원가입</a></li>
+                            <li><a href="login.html" class="menu_txt">로그인</a></li>
                         </ul>
                     </div>
                     <div class="downSide">
                         <ul>
-                            <li><a href="event_page.html">이벤트</a></li>
-                            <li><a href="faq.html">고객문의</a></li>
-                            <li><a href="#">호텔소개</a></li>
+                            <li><a href="event_page.html" class="menu_txt">이벤트</a></li>
+                            <li><a href="faq.html" class="menu_txt">고객문의</a></li>
+                            <li><a href="#" class="menu_txt">호텔소개</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="line"></div>
+            
+            <div class="hotelMenu">
+
+                <ul>
+                    <li><label for="theConrad">THE CONRAD</label></li>
+                    <li><a href="#">서울콘래드호텔</a></li>
+                    <li><a href="#">제주콘래드호텔</a></li>
+                    <li><label for="theConrad">서울 강남</label></li>
+                    <li><a href="#">콘래드 역삼</a></li>
+                    <li><a href="#">콘래드 서초</a></li>
+                    <li><a href="#">콘래드 구로</a></li>
+                    <li><label for="theConrad">서울 강북</label></li>
+                    <li><a href="#">콘래드 광화문</a></li>
+                    <li><a href="#">콘래드 마포</a></li>
+                    <li><a href="#">콘래드 서대문</a></li>
+                </ul>
+            </div>
         </div>
         <!---- nav ----->
         <div class="nav">
@@ -334,5 +353,11 @@
         </div>
     </div>
     
+    <script>
+        $('.findHotel').on('click', function() {
+
+            $('.hotelMenu').slideToggle();
+        });
+    </script>
 </body>
 </html>
