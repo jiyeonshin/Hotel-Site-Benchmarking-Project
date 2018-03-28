@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <title>호텔소개</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!--header 부분-->
+        <div class="header">
+
+            <div class="hMenu">
+
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="#" class="menu_txt findHotel">호텔찾기</a>
+
+                        </li>
+                        <li><a href="#" class="menu_txt">예약</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                </div>
+                <div class="right">
+                    <div class="upSide">
+                        <ul>
+
+                            <li><a href="#" class="menu_txt">회원가입</a></li>
+                            <li><a href="#" class="menu_txt">로그인</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="downSide">
+                        <ul>
+                            <li><a href="#" class="menu_txt">이벤트</a></li>
+                            <li><a href="#" class="menu_txt">고객문의</a></li>
+                            <li><a href="#" class="menu_txt">호텔소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="line">
+
+            </div>
+            <div class="hotelMenu">
+
+                <ul>
+                    <li><label for="theConrad">THE CONRAD</label></li>
+                    <li><a href="#">서울콘래드호텔</a></li>
+                    <li><a href="#">제주콘래드호텔</a></li>
+                    <li><label for="theConrad">서울 강남</label></li>
+                    <li><a href="#">콘래드 역삼</a></li>
+                    <li><a href="#">콘래드 서초</a></li>
+                    <li><a href="#">콘래드 구로</a></li>
+                    <li><label for="theConrad">서울 강북</label></li>
+                    <li><a href="#">콘래드 광화문</a></li>
+                    <li><a href="#">콘래드 마포</a></li>
+                    <li><a href="#">콘래드 서대문</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--gnb 부분-->
+
+        <div class="gnbBoard">
+            <ul>
+                <li><a href="#hotelIntro" class="gnb1">INTRODUCE</a></li>
+                <li><a href="#hotelLocation" class="gnb2">LOCATION</a></li>
+            </ul>
+        </div>
+
+        <!--section 부분-->
+        <div class="sectionAll">
+
+            <div class="sectionBoard">
+                <!--호텔소개 제목-->
+                <div class="title">
+
+                    <img src="img/aboutTitle.png" alt="">
+                </div>
+
+                <!--section1 - 호텔소개-->
+                <section id="hotelIntro">
+
+                    <img src="img/aboutpage_01.jpg" alt="">
+                </section>
+
+
+                <!--section2 - 위치-->
+                <section id="hotelLocation">
+
+                    <img src="img/ConRad_location.png" alt="">
+                </section>
+            </div>
+        </div>
+
+
+
+        <!--footer 부분-->
+        <div class="footer">
+            <div class="footer_content">
+                <ul>
+                    <img src="img/hotel_font_center.png" alt="콘래드로고">
+                    <li><a href="#">호텔소개</a></li>
+                    <li>|</li>
+                    <li><a href="#">고객문의</a></li>
+                    <li>|</li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li>|</li>
+                    <li><a href="#">안내</a></li>
+                </ul>
+                <address>
+                서울특별시 영등포구 국제금융로 10(여의도동) 07326 콘래드 서울 | Tel. 02.6137.7000 | Fax. 02. 6137.7001 | 대표 Stuart Mercier(에스아이에프씨호텔) | 사업자 등록번호 104-81-94925 Copyright 2017 All rights reserved Hilton
+            </address>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        var sectionBoard = $('.sectionBoard').height();
+        
+        console.log(sectionBoard);
+        $('.findHotel').on('click', function() {
+
+            $('.hotelMenu').slideToggle();
+        });
+
+        $(document).ready(function() {
+
+            var scrolltop = $(this).scrollTop();
+
+
+            $('.gnb1, .gnb2').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(this.hash).offset().top - 90
+                }, 2000)
+
+            });
+        });
+    </script>
+</body>
+
+</html>
