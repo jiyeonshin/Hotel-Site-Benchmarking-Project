@@ -1,15 +1,5 @@
 $(function () {    
     
-    /*var date = new Date();
-    var currentMonth = date.getMonth();
-    var currentDate = date.getDate();
-    var currentYear = date.getFullYear();
-
-    $('#datepickerIn').datepicker({
-        minDate: new Date(currentYear, currentMonth, currentDate),
-        dateFormat: 'yy-mm-dd'
-    });*/
-    
     $('#adult_bt_down').click(function (a) {
         a.preventDefault();
         var numTxt = $('#adultCount').val();

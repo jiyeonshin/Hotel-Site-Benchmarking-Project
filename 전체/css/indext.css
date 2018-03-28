@@ -262,6 +262,12 @@ text-align: center;
     border: 1px solid #cbb682;
 }
 
+.contents #datepickerIn, #datepickerOut {
+    text-align: center;
+    font-size: 15px;
+    /*border: 1px solid #cbb682*/
+}
+
 .contents select .theConrad {
     background: #785f37;
     color: #e9dbbd;
