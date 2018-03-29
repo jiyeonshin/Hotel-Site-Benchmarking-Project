@@ -1,4 +1,9 @@
-$(function () {    
+$(function () {   
+    /*호텔찾기 토*/
+    $('.findHotel').on('click', function() {
+            
+            $('.hotelMenu').slideToggle();
+        });
     
     /*느낌표 이미지 설명글*/
     var kidimg=$('.kid_pic>img');
