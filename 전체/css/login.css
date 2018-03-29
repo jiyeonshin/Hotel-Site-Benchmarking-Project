@@ -9,7 +9,9 @@
   width: 100%;
   height: 100%;
   background: #0005;
-  position: absolute;
+  position: fixed;
+    top: 0;
+    left: 0;
   z-index: 100;
   display: none;
 }
@@ -22,7 +24,7 @@
 .contents {
     width: 800px;
     height: auto;
-    margin: 100px auto;
+    margin: 150px auto;
 }
 
 
@@ -38,7 +40,7 @@
 .modal .findContent {
   width: 600px;
   height: auto;
-  margin: 150px auto;
+  margin: 250px auto;
   background: #fff;
   position: relative;
 }
