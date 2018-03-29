@@ -6,14 +6,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/step2opt.js"></script>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/step2opt.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
     <div id="wrap">
-        <div class="header">
+                <div class="header">
+
             <div class="hMenu">
+
                 <div class="left">
                     <ul>
                         <li><a href="#" class="menu_txt findHotel">호텔찾기</a></li>
@@ -25,23 +27,28 @@
                 <div class="right">
                     <div class="upSide">
                         <ul>
+
                             <li><a href="JoinPage.html" class="menu_txt">회원가입</a></li>
                             <li><a href="login.html" class="menu_txt">로그인</a></li>
+
                         </ul>
                     </div>
                     <div class="downSide">
                         <ul>
-                            <li><a href="event_page.html" class="menu_txt">이벤트</a></li>
+                            <li><a href="#" class="menu_txt">이벤트</a></li>
                             <li><a href="faq.html" class="menu_txt">고객문의</a></li>
                             <li><a href="intro.html" class="menu_txt">호텔소개</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="line"></div>
-            
-                        <div class="hotelMenu">
 
+            <div class="line">
+
+            </div>
+            
+                    <div class="hotelMenu">
+            
                 <ul>
                     <li><label for="theConrad">THE CONRAD</label></li>
                     <li><a href="#">서울콘래드호텔</a></li>
@@ -97,12 +104,12 @@
                             <li>
                                 <input type="checkbox" id="package1" name="addoptions" value="조식" onclick="onClick1(this);">
                                 <label for="package1">Daily Breakfast Buffet for Adult</label> 
-                                <span id="optpri_buf">50000 </span>
+                                <span id="optpri_buf">50,000 </span>
                             </li>
                             <li>
                                 <input type="checkbox" id="package2" name="addoptions" value="침대" onclick="onClick2(this);">
                                 <label for="package2">Daily Extra bed</label> 
-                                <span id="optpri_bed">30000 </span>
+                                <span id="optpri_bed">30,000 </span>
                             </li>
                         </ul>
                     </div>
@@ -206,7 +213,7 @@
                     </ul>
                     <div class="allprice">
                         <ul>
-                            <li>요금합계<span id="total">375100 </span></li>
+                            <li>요금합계<span id="total">375,100 </span></li>
                         </ul>
 <!--
                         <div class="priceSum">요금합계</div>
@@ -240,7 +247,7 @@
     
     <script>
         $('.findHotel').on('click', function() {
-
+            
             $('.hotelMenu').slideToggle();
         });
     </script>
