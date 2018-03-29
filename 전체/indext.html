@@ -6,34 +6,31 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/indext.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/indext.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
-    <title>예약</title>
-    <script>
-        $(function(){
-            $('#datepickerIn, #datepickerOut').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        });
-    </script>
-
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>-->
+    <title>ConradHotel</title>
 </head>
 
 <body>
     <div id="wrap">
-              <div class="header">
-
+      
+        <!--header-->
+        <div class="header">
             <div class="hMenu">
-
                 <div class="left">
                     <ul>
-                        <li><a href="#" class="menu_txt findHotel">호텔찾기</a></li>
-                        <li><a href="indext.html" class="menu_txt">예약</a></li>
+                        <li><a href="#">호텔찾기</a></li>
+                        <li><a href="#">예약</a></li>
                     </ul>
                 </div>
                 <div class="logo" onclick="location.href='index_main.html'">
@@ -41,49 +38,28 @@
                 <div class="right">
                     <div class="upSide">
                         <ul>
-
-                            <li><a href="JoinPage.html" class="menu_txt">회원가입</a></li>
-                            <li><a href="login.html" class="menu_txt">로그인</a></li>
-
+                            
+                            <li><a href="JoinPage.html">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
                         </ul>
                     </div>
                     <div class="downSide">
                         <ul>
-                            <li><a href="event_page.html" class="menu_txt">이벤트</a></li>
-                            <li><a href="faq.html" class="menu_txt">고객문의</a></li>
-                            <li><a href="intro.html" class="menu_txt">호텔소개</a></li>
+                            <li><a href="event_page.html">이벤트</a></li>
+                            <li><a href="faq.html">고객문의</a></li>
+                            <li><a href="#">호텔소개</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="line">
-
-            </div>
-            
-                    <div class="hotelMenu">
-            
-                <ul>
-                    <li><label for="theConrad">THE CONRAD</label></li>
-                    <li><a href="#">서울콘래드호텔</a></li>
-                    <li><a href="#">제주콘래드호텔</a></li>
-                    <li><label for="theConrad">서울 강남</label></li>
-                    <li><a href="#">콘래드 역삼</a></li>
-                    <li><a href="#">콘래드 서초</a></li>
-                    <li><a href="#">콘래드 구로</a></li>
-                    <li><label for="theConrad">서울 강북</label></li>
-                    <li><a href="#">콘래드 광화문</a></li>
-                    <li><a href="#">콘래드 마포</a></li>
-                    <li><a href="#">콘래드 서대문</a></li>
-                </ul>
-            </div>
+            <div class="line"></div>
         </div>
+            
         <!--nav-->
         <div class="nav">
             <div class="step">
                 <ul>
                     <li>
-
                         <span class="step_bold">STEP1</span> 날짜/인원/객실 선택
                         <div class="arrow"></div>
 
@@ -103,12 +79,13 @@
                 </ul>
             </div>
         </div>
+
         <!--contents-->
         <div class="contents">
             <div class="menu1">
                 <div class="text">호텔선택</div>
                 <select name="hotel" id="hotel">
-                <option value="선택" class="theConrad">호텔선택</option>
+                <option value="선택" class="theConrad" selected>호텔선택</option>
                 <option value="서울">서울콘래드호텔</option>
                 <option value="제주">제주콘래드호텔</option>
                 <option value="서울 강남" class="theConrad">서울 강남</option>
@@ -124,13 +101,13 @@
             <div class="menu2">
                 <ul>
                     <div class="checkin">체크인</div>
-                    <input type="text" name="dateCheckIn" id="datepickerIn">
+                    <input type="text" name="dateCheckIn" id="datepickerIn" placeholder="날짜선택">
                 </ul>
             </div>
             <div class="menu3">
                 <ul>
                     <li class="checkout">체크아웃</li>
-                    <input type="text" name="dateCheckOut" id="datepickerOut">
+                    <input type="text" name="dateCheckOut" id="datepickerOut" placeholder="날짜선택">
                 </ul>
             </div>
             <div class="menu4">
@@ -164,20 +141,25 @@
                 </div>
             </div>
              <div class="menu7">
-                <a href="reservation2.html"><span class="search">검색</span></a>
+                <!--<a href="reservation2.html">--><span class="search">검색</span><!--</a>-->
             </div>
         </div>
-        
-       
-    <div class="section"> 
-        <p> 예약을 원하시는 호텔,날짜,인원을 선택 후 검색 버튼을 눌러주세요</p>
+
+        <div class="section"> 
+            <p>예약을 원하시는 호텔,날짜,인원을 선택 후 검색 버튼을 눌러주세요</p>
         </div>
 
+        <!--<script>
+            var search=$('span.search');
+            var sectionP=$('.section>p');
+            
+            search.on('click',function(){
+                sectionP.css({'<a href="reservation2.html"></a>'});
+            });
+        </script>-->
+        
 
         <!--footer--->
-
-
-
         <div class="footer">
             <div class="footer_content">
                 <ul>
@@ -195,14 +177,6 @@
                 </address>
             </div>
         </div>
-
     </div>
-<script>
-        $('.findHotel').on('click', function() {
-
-            $('.hotelMenu').slideToggle();
-        });
-    </script>
 </body>
-
 </html>
