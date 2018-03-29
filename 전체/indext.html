@@ -10,9 +10,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/indext.js"></script>
-    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
+    
     
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
@@ -81,83 +81,76 @@
         </div>
 
         <!--contents-->
-        <div class="contents">
-            <div class="menu1">
-                <div class="text">호텔선택</div>
-                <select name="hotel" id="hotel">
-                <option value="선택" class="theConrad" selected>호텔선택</option>
-                <option value="서울">서울콘래드호텔</option>
-                <option value="제주">제주콘래드호텔</option>
-                <option value="서울 강남" class="theConrad">서울 강남</option>
-                <option value="역삼">콘래드 역삼</option>
-                <option value="서초">콘래드 서초</option>
-                <option value="구로">콘래드 구로</option>
-                <option value="서울 강북" class="theConrad">서울 강북</option>
-                <option value="광화문">콘래드 광화문</option>
-                <option value="마포">콘래드 마포</option>
-                <option value="서대문">콘래드 서대문</option>
-                </select>
-            </div>
-            <div class="menu2">
-                <ul>
-                    <div class="checkin">체크인</div>
-                    <input type="text" name="dateCheckIn" id="datepickerIn" placeholder="날짜선택">
-                </ul>
-            </div>
-            <div class="menu3">
-                <ul>
-                    <li class="checkout">체크아웃</li>
-                    <input type="text" name="dateCheckOut" id="datepickerOut" placeholder="날짜선택">
-                </ul>
-            </div>
-            <div class="menu4">
-                <div class="adult"> 성인</div>
-                <div class="menu_left">
-                    <input type="text" name="adultCount" id="adultCount" value="1">
+        <form action="" name="frm" id="frm">
+            <div class="contents">
+                <div class="menu1">
+                    <div class="text">호텔선택</div>
+                    <select name="hotel" id="hotel">
+                    <option value="선택" class="theConrad">호텔선택</option>
+                    <option value="서울" selected>서울콘래드호텔</option>
+                    <option value="제주">제주콘래드호텔</option>
+                    <option value="서울 강남" class="theConrad">서울 강남</option>
+                    <option value="역삼">콘래드 역삼</option>
+                    <option value="서초">콘래드 서초</option>
+                    <option value="구로">콘래드 구로</option>
+                    <option value="서울 강북" class="theConrad">서울 강북</option>
+                    <option value="광화문">콘래드 광화문</option>
+                    <option value="마포">콘래드 마포</option>
+                    <option value="서대문">콘래드 서대문</option>
+                    </select>
                 </div>
-                <div class="menu_right">
-                    <input type="button" value="+" id="adult_bt_up"><br>
-                    <input type="button" value="-" id="adult_bt_down">
+                <div class="menu2">
+                    <ul>
+                        <div class="checkin">체크인</div>
+                        <input type="text" name="dateCheckIn" id="datepickerIn" placeholder="날짜선택">
+                    </ul>
+                </div>
+                <div class="menu3">
+                    <ul>
+                        <li class="checkout">체크아웃</li>
+                        <input type="text" name="dateCheckOut" id="datepickerOut" placeholder="날짜선택">
+                    </ul>
+                </div>
+                <div class="menu4">
+                    <div class="adult"> 성인</div>
+                    <div class="menu_left">
+                        <input type="text" name="adultCount" id="adultCount" value="1">
+                    </div>
+                    <div class="menu_right">
+                        <input type="button" value="+" id="adult_bt_up"><br>
+                        <input type="button" value="-" id="adult_bt_down">
+                    </div>
+                </div>
+                <div class="menu5">
+                    <div class="kid"> 어린이</div>
+                    <div class="menu_left">
+                        <input type="text" name="kidCount" id="kidCount" value="0">
+                    </div>
+                    <div class="menu_right">
+                        <input type="button" value="+" id="kid_bt_up"><br>
+                        <input type="button" value="-" id="kid_bt_down">
+                    </div>
+                </div>
+                  <div class="menu6">
+                    <div class="baby">유아</div>
+                    <div class="menu_left">
+                        <input type="text" name="babyCount" id="babyCount" value="0">
+                    </div>
+                    <div class="menu_right">
+                        <input type="button" value="+" id="baby_bt_up"><br>
+                        <input type="button" value="-" id="baby_bt_down">
+                    </div>
+                </div>
+                 <div class="menu7">
+                    <a href="reservation2.html"><span class="search">검색</span></a>
                 </div>
             </div>
-            <div class="menu5">
-                <div class="kid"> 어린이</div>
-                <div class="menu_left">
-                    <input type="text" name="kidCount" id="kidCount" value="0">
-                </div>
-                <div class="menu_right">
-                    <input type="button" value="+" id="kid_bt_up"><br>
-                    <input type="button" value="-" id="kid_bt_down">
-                </div>
-            </div>
-              <div class="menu6">
-                <div class="baby">유아</div>
-                <div class="menu_left">
-                    <input type="text" name="babyCount" id="babyCount" value="0">
-                </div>
-                <div class="menu_right">
-                    <input type="button" value="+" id="baby_bt_up"><br>
-                    <input type="button" value="-" id="baby_bt_down">
-                </div>
-            </div>
-             <div class="menu7">
-                <!--<a href="reservation2.html">--><span class="search">검색</span><!--</a>-->
-            </div>
-        </div>
 
-        <div class="section"> 
-            <p>예약을 원하시는 호텔,날짜,인원을 선택 후 검색 버튼을 눌러주세요</p>
-        </div>
+            <div class="section"> 
+                <p>예약을 원하시는 호텔,날짜,인원을 선택 후 검색 버튼을 눌러주세요</p>
+            </div>
+        </form>
 
-        <!--<script>
-            var search=$('span.search');
-            var sectionP=$('.section>p');
-            
-            search.on('click',function(){
-                sectionP.css({'<a href="reservation2.html"></a>'});
-            });
-        </script>-->
-        
 
         <!--footer--->
         <div class="footer">

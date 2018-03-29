@@ -94,10 +94,26 @@ $(function () {
     });
                 
     $('.search').click(function(){
-        $('.section>p').css({'display':'none','height':'800px'});
-        $('.section').add('#box').css({'width':'1200px','height':'1000px','background':'#ff0'});
-        $('#box').load('reservation2.html');
-        return false;
+        
+        // 전부 입력해야 다음 페이지로 넘어간다
+        
+        var datepickerIn = frm.datepickerIn.value;
+        if (datepickerIn == '' || datepickerIn == null) {
+            alert("체크인 날짜를 선택해주세요")
+            return false;
+        }
+        
+        var datepickerOut = frm.datepickerOut.value;
+        if (datepickerOut == '' || datepickerOut == null) {
+            alert("체크아웃 날짜를 선택해주세요")
+            return false;
+        }
+
+        
+        /*$('.section>p').css({'display':'none','height':'auto'});
+        $('iframe').css({'display':'block'});*/
+        /*$('.section').add('#box').css({'width':'1200px','height':'1000px'});*/
+        
     });
 });
 
