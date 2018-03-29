@@ -1,5 +1,42 @@
 $(function () {    
     
+    /*느낌표 이미지 설명글*/
+    var kidimg=$('.kid_pic>img');
+        var ballon1=$('.ballon1>span.ballonbox');
+        var babyimg=$('.baby_pic>img');
+        var bollon=$('.bollon>span.bollonbox');
+   
+        kidimg.hover(
+            function(e){
+                /*e.preventDefault();
+                console.log("in");*/
+                kidimg.css({'cursor':'pointer'});
+                 ballon1.css({'display':'block'});
+            } 
+        );
+        
+        kidimg.mouseout(
+            function(e) {
+                ballon1.css({'display':'none'});
+            }
+        )
+        
+        babyimg.hover(
+            function(e){
+                /*e.preventDefault();
+                console.log("in");*/
+                babyimg.css({'cursor':'pointer'});
+                 bollon.css({'display':'block'});
+            } 
+        );
+        
+        babyimg.mouseout(
+            function(e) {
+                bollon.css({'display':'none'});
+            }
+        )
+    
+    
     /*체크인,체크아웃 선택 달력*/
     $( "#datepickerIn" ).datepicker({
         defaultDate: "+1w",

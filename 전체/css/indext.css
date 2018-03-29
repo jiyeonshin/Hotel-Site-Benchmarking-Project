@@ -237,19 +237,18 @@ text-align: center;
 
 
 .ballon1 span.ballonbox{
-        position: absolute;
-    top: 220px;
-    right:650px;
+    position: absolute;
+    top: -20px;
+    right:350px;
     background: #555;
-      min-width: 145px;
+    min-width: 145px;
     color: #444;
-    
     border: 1px solid #89745d;
     background: #fff;
 /*    padding: 12px 15px;*/
 
     text-align: left;
-/*    display: none;*/
+    display: none;
     line-height: 21px;
     
     
@@ -258,11 +257,10 @@ text-align: center;
 }
 
 
-
 .bollon span.bollonbox{
-        position: absolute;
-    top: 230px;
-    right:550px;
+    position: absolute;
+    top: 0px;
+    right:200px;
     background: #555;
       
 /*     display: inline-block;*/
@@ -274,7 +272,7 @@ text-align: center;
 /*    padding: 12px 15px;*/
 
     text-align: left;
-/*    display: none;*/
+    display: none;
     line-height: 21px;
     z-index: 5;
 }
