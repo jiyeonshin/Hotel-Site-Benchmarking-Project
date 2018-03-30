@@ -135,7 +135,9 @@ $(function () {
         $('#babyCount').val(num);
     });
                 
-    $('.search').click(function(){
+    $('#search').click(function(e){
+        
+        /*e.preventDefault();*/
         
         // 전부 입력해야 다음 페이지로 넘어간다
         
